@@ -2,9 +2,13 @@ bunnyhill
 =========
 
 Resources and practice for JavaScript developers getting started with the MEAN stack.
+
 M: MongoDB
+
 E: Express
+
 A: Angular
+
 N: Node
 
 The following documentation will walk you through the steps of installation and project setup.

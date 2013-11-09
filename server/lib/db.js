@@ -11,4 +11,6 @@ db.once('open', function callback() {
 	logger.info('mongoose connection is open');
 });
 
-var DeckModel = mongoose.model('Deck', new mongoose.Schema({}, {strict: false}));
+var DeckModel = mongoose.model('Deck', new mongoose.Schema({}, {
+	strict: false
+}));

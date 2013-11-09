@@ -16,7 +16,9 @@ exports.get = function(req, res) {
 
 exports.getByName = function(req, res) {
 	var name = req.params.name;
-	Deck.findOne({'name': name}, function(err, data) {
+	Deck.findOne({
+		'name': name
+	}, function(err, data) {
 		if (err) {
 			logger.error(module + ' get deck by name err=' + err);
 			res.send(err);

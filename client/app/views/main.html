@@ -1,0 +1,8 @@
+<div class="row">
+	<div class="span6">
+  		<h1>Select a game</h1>
+  		<ul>
+      		<li ng-repeat="deck in decks"><a ng-href="#/game/{{deck.name}}" ng-click='startGame(deck)'>{{deck.name}}</a></li>
+  		</ul>
+	</div>
+</div>

@@ -1,0 +1,35 @@
+[
+	{
+		"name": "Numbers", 
+		"language": "Italian", 
+		"cards": [
+			{"value": "zero", "translated": "zero"}, 
+			{"value": "one", "translated": "uno"},
+			{"value": "two", "translated": "due"},
+			{"value": "three", "translated": "tre"},
+			{"value": "four", "translated": "quattro"},
+			{"value": "five", "translated": "cinque"},
+			{"value": "six", "translated": "sei"},
+			{"value": "seven", "translated": "sette"},
+			{"value": "eight", "translated": "otto"},
+			{"value": "nine", "translated": "nove"},
+			{"value": "ten", "translated": "dieci"}
+		]
+	},
+	{
+		"name": "Days of the Week", 
+		"language": "Italian", 
+		"cards": [
+			{"value": "Monday", "translated": "lunedi"}, 
+			{"value": "Tuesday", "translated": "martedi"},
+			{"value": "Wednesday", "translated": "mercoledi"},
+			{"value": "Thursday", "translated": "giovedi"},
+			{"value": "Friday", "translated": "venerdi"},
+			{"value": "Saturday", "translated": "sabato"},
+			{"value": "Sunday", "translated": "domenica"},
+			{"value": "yesterday", "translated": "ieri"},
+			{"value": "today", "translated": "oggi"},
+			{"value": "tomorrow", "translated": "domani"}
+		]
+	}
+]

@@ -1,10 +1,47 @@
 <div class="row">
-	<div class="span6">
-		<h2>Playing: {{name}}</h2>
+	<div class="span8">
+		<h2>Playing: {{name}} in {{game.deck.language}}</h2>
 	</div>
 </div>
 
 <div class="row">
+	<div class="span3">
+		<span>Score: {{scoreBoard.score}} correct out of {{scoreBoard.outOf}}</span>
+	</div>
+</div>
+
+<div class="card">
+	<div class="row">
+		<div class="span2">
+			Card Says
+		</div>
+		<div class="span2">
+			{{currentCard.value}}
+		</div>
+	</div>
+	<div class="row">
+		<div class="span2">
+			Enter Your Translation
+		</div>
+		<div class="span2">
+			<input type="text" ng-model="guess" focus-me="focusInput" ng-change="clearFeedback()" />
+		</div>
+	</div>
+	<div class="row">
+		<div class="span2">
+			<button ng-click="checkGuess(); focusInput=true" type="button" class="btn btn-info">Check</button>
+		</div>
+	</div>
+</div>
+
+<div class="row">
+	<div class="span4">
+		<span ng-show="feedback" class="alert alert-error">{{feedback}}</span>
+	</div>
+</div>
+
+
+<!-- <div class="row">
 	<div class="span2">
 		{{currentCard.value}}
 	</div>
@@ -17,13 +54,8 @@
 	<div class="span3">
 		<span>Score: {{scoreBoard.score}} correct out of {{scoreBoard.outOf}}</span>
 	</div>
-</div>
+</div> -->
 
-<div class="row">
-	<div class="span4">
-		<span ng-show="feedback" class="alert alert-error">{{feedback}}</span>
-	</div>
-</div>
 
 <!-- DEBUG -->
 <div class="row debug-toggle">

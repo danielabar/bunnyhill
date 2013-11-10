@@ -18,14 +18,21 @@
 		<span>Score: {{scoreBoard.score}} correct out of {{scoreBoard.outOf}}</span>
 	</div>
 </div>
+
 <div class="row">
 	<div class="span4">
 		<span ng-show="feedback" class="alert alert-error">{{feedback}}</span>
 	</div>
 </div>
 
+<!-- DEBUG -->
+<div class="row debug-toggle">
+	<div class="span4">
+		<input type="checkbox" ng-model="debug" /> Debug
+	</div>
+</div>
 
-<div class="row">
+<div ng-show="debug" class="row">
 	<div class="span4">
 		<h3>DEBUG</h3>
 		<ul>

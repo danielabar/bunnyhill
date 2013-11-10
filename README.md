@@ -76,8 +76,8 @@ Windows users may need to open the the command window as Administrator.
 
 ## <a name="learning-resources"/>Learning Resources
 * [Git Simple Guide](http://rogerdudler.github.io/git-guide/) Just the basics, get started quickly.
-* [Pro Git e-book](http://git-scm.com/book)
-* [Sublime Text 2 Free Video Course](http://net.tutsplus.com/articles/news/perfect-workflow-in-sublime-text-free-course/) A series of short screencasts.
+* [Pro Git e-book](http://git-scm.com/book) A free e-book on Git, from basic introduction to advanced topics.
+* [Sublime Text 2 Free Video Course](http://net.tutsplus.com/articles/news/perfect-workflow-in-sublime-text-free-course/) A series of short screencasts to learn how to use Sublime, some very cool features.
 * [Sublime Text 2 Unofficial Documentation](http://sublime-text-unofficial-documentation.readthedocs.org/en/sublime-text-2/)
 * [Angular Phonecat Tutorial](http://docs.angularjs.org/tutorial) Build a phone catalogue app with Angular. Excellent step-by-step instructions and explanation of Angular concepts.
 * [The Art of Node](https://github.com/maxogden/art-of-node) A short introduction to Node.js
@@ -90,4 +90,4 @@ Windows users may need to open the the command window as Administrator.
 * [npm](https://npmjs.org/) is roughly analogous to [Maven](http://maven.apache.org/)
 * [Grunt](http://gruntjs.com/) is a task manager similar to [Ant](http://ant.apache.org/)
 * [Yeoman](http://yeoman.io/) is a scaffolding tool, sort of like [Maven Archetype](http://maven.apache.org/guides/introduction/introduction-to-archetypes.html)
-* [Express.js](http://expressjs.com/) is (very rough comparison here) like [Spring MVC](http://docs.spring.io/spring/docs/3.2.x/spring-framework-reference/html/mvc.html), at least in exposing routes.
+* [Express.js](http://expressjs.com/) is (very rough comparison here) like [Spring MVC](http://docs.spring.io/spring/docs/3.2.x/spring-framework-reference/html/mvc.html), at least in exposing routes. If you're coming from Rails, a more apt comparison is Express is to Node what Sinatra is to Rails.

@@ -1,12 +1,16 @@
 'use strict';
 
 angular.module('meanRecipieApp')
-	.factory('GameService', function() {
+	.factory('GameService', function(localStorageService) {
 
 		var game = {
 			scoreBoard: {}
 		};
 		var cardIndex = 0;
+
+		var saveScoreboard = function() {
+			localStorageService.add(game.deck.name, angular.toJson(game.scoreBoard));
+		};
 
 		return {
 
@@ -55,6 +59,7 @@ angular.module('meanRecipieApp')
 				} else {
 					game.scoreBoard.incorrectCards.push(card);
 				}
+				saveScoreboard();
 				return game.scoreBoard;
 			},
 

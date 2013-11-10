@@ -41,17 +41,17 @@ Windows users may need to open the the command window as Administrator.
 	```
 
 ## Project Setup
-* If you don't already have one, [Sign up for a Github account](https://github.com/). Strictly speaking, you don't need one just to clone a repo, but you will need an account to create your own repos and collaborate with others.
-* ```cd``` to your ```projects``` directory
-* ```git clone https://github.com/danielabar/bunnyhill.git```
-* ```cd bunnyhill```
-* ```npm install```
-* ```cd dbinit```
-* ```mongoimport -d langfun -c decks --type json --jsonArray --drop decks.json```
-* ```cd ..```
-* ```grunt test```
-* ```nodemon server.js``` Nodemon will watch for file changes and automatically redeploy so you never need to restart your Node server.
-* Launch a browser and enter [http://localhost:3000](http://localhost:3000)
+1. If you don't already have one, [Sign up for a Github account](https://github.com/). Strictly speaking, you don't need one just to clone a repo, but you will need an account to create your own repos and collaborate with others.
+1. ```cd``` to your ```projects``` directory
+1. ```git clone https://github.com/danielabar/bunnyhill.git```
+1. ```cd bunnyhill```
+1. ```npm install```
+1. ```cd dbinit```
+1. ```mongoimport -d langfun -c decks --type json --jsonArray --drop decks.json```
+1. ```cd ..```
+1. ```grunt test```
+1. ```nodemon server.js``` Nodemon will watch for file changes and automatically redeploy so you never need to restart your Node server.
+1. Launch a browser and enter [http://localhost:3000](http://localhost:3000)
 
 ## Configure Project Settings
 * Open Sublime Text 2
@@ -89,5 +89,5 @@ Windows users may need to open the the command window as Administrator.
 ### <a name="java-comparison"/>For those coming from the Java world...
 * [npm](https://npmjs.org/) is roughly analogous to [Maven](http://maven.apache.org/)
 * [Grunt](http://gruntjs.com/) is a task manager similar to [Ant](http://ant.apache.org/)
-* Yeoman is a scaffolding tool, sort of like [Maven Archetype](http://maven.apache.org/guides/introduction/introduction-to-archetypes.html)
-* Express.js is (very rough comparison here) like [Spring MVC](http://docs.spring.io/spring/docs/3.2.x/spring-framework-reference/html/mvc.html), at least in exposing routes.
+* [Yeoman](http://yeoman.io/) is a scaffolding tool, sort of like [Maven Archetype](http://maven.apache.org/guides/introduction/introduction-to-archetypes.html)
+* [Express.js](http://expressjs.com/) is (very rough comparison here) like [Spring MVC](http://docs.spring.io/spring/docs/3.2.x/spring-framework-reference/html/mvc.html), at least in exposing routes.

@@ -11,6 +11,7 @@ angular.module('meanRecipieApp')
 		return {
 
 			initScoreBoard: function() {
+				cardIndex = 0;
 				game.scoreBoard.score = 0;
 				game.scoreBoard.incorrectCards = [];
 				game.scoreBoard.correctCards = [];
@@ -20,7 +21,7 @@ angular.module('meanRecipieApp')
 			},
 
 			getGame: function() {
-				this.initScoreBoard();
+				this.initScoreBoard();	
 				return game;
 			},
 

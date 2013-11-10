@@ -7,7 +7,6 @@ angular.module('meanRecipieApp')
 
 		$scope.startGame = function(deck) {
 			GameService.setGame(deck);
-			// href="#/game/{{deck.name}}"
 			$location.path('#/game/' + deck.name);
 		}
 

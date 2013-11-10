@@ -4,8 +4,7 @@ angular.module('meanRecipieApp')
 	.factory('GameService', function() {
 
 		var game = {
-			scoreBoard: {},
-			incorrectCards: []
+			scoreBoard: {}
 		};
 		var cardIndex = 0;
 
@@ -13,6 +12,8 @@ angular.module('meanRecipieApp')
 
 			initScoreBoard: function() {
 				game.scoreBoard.score = 0;
+				game.scoreBoard.incorrectCards = [];
+				game.scoreBoard.correctCards = [];
 				if (game.deck) {
 					game.scoreBoard.outOf = game.deck.cards.length;
 				}
@@ -41,14 +42,17 @@ angular.module('meanRecipieApp')
 				if (card.translated === guess) {
 					return true;
 				} else {
-					game.incorrectCards.push(card);
 					return false;
 				}
 			},
 
-			updateScoreBoard: function(guessResult) {
+			// Nice to have: save in LocalStorage: date, game.deck.name, scoreBoard
+			updateScoreBoard: function(guessResult, card) {
 				if (guessResult) {
 					game.scoreBoard.score += 1;
+					game.scoreBoard.correctCards.push(card);
+				} else {
+					game.scoreBoard.incorrectCards.push(card);
 				}
 				return game.scoreBoard;
 			},

@@ -5,18 +5,21 @@ describe('Controller: ScoreCtrl', function () {
   // load the controller's module
   beforeEach(module('meanRecipieApp'));
 
-  var ScoreCtrl,
-    scope;
+  var ScoreCtrl;
+  var scope;
+  var mockGameService = {
+  	getScoreBoard: function() {
+  		return {score: 0, outOf: 10}
+  	}
+  };
 
   // Initialize the controller and a mock scope
   beforeEach(inject(function ($controller, $rootScope) {
     scope = $rootScope.$new();
     ScoreCtrl = $controller('ScoreCtrl', {
-      $scope: scope
+      $scope: scope,
+      GameService: mockGameService
     });
   }));
 
-  it('should attach a list of awesomeThings to the scope', function () {
-    expect(scope.awesomeThings.length).toBe(3);
-  });
 });

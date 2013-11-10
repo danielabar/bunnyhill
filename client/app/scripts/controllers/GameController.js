@@ -23,7 +23,7 @@ angular.module('meanRecipieApp')
 
 		$scope.checkGuess = function() {
 			var result = GameService.checkGuess($scope.currentCard, $scope.guess);
-			$scope.scoreBoard = GameService.updateScoreBoard(result);
+			$scope.scoreBoard = GameService.updateScoreBoard(result, $scope.currentCard);
 			$scope.feedback = GameService.buildFeedback(result, $scope.currentCard);
 			moveAhead();
 		}
@@ -32,7 +32,6 @@ angular.module('meanRecipieApp')
 			$scope.feedback = null;
 		}
 
-		// TODO: handle when we're at the end of the deck
 		var moveAhead = function() {
 			$scope.currentCard = GameService.getNextCard();
 			if ($scope.currentCard) {

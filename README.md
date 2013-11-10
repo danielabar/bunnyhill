@@ -90,4 +90,4 @@ Windows users may need to open the the command window as Administrator.
 * [npm](https://npmjs.org/) is roughly analogous to [Maven](http://maven.apache.org/)
 * [Grunt](http://gruntjs.com/) is a task manager similar to [Ant](http://ant.apache.org/)
 * [Yeoman](http://yeoman.io/) is a scaffolding tool, sort of like [Maven Archetype](http://maven.apache.org/guides/introduction/introduction-to-archetypes.html)
-* [Express.js](http://expressjs.com/) is (very rough comparison here) like [Spring MVC](http://docs.spring.io/spring/docs/3.2.x/spring-framework-reference/html/mvc.html), at least in exposing routes. If you're coming from Rails, a more apt comparison is Express is to Node what Sinatra is to Rails.
+* [Express.js](http://expressjs.com/) is (very rough comparison here) like [Spring MVC](http://docs.spring.io/spring/docs/3.2.x/spring-framework-reference/html/mvc.html), at least in exposing routes. For the Rails folks, a more apt comparison is Express is to Node what Sinatra is to Rails.

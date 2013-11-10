@@ -87,7 +87,7 @@ Windows users may need to open the the command window as Administrator.
 * [Yeoman, Grunt and Bower](http://yeoman.io/) Tooling used to manage the client side.
 
 ### <a name="java-comparison"/>For those coming from the Java world...
-* [npm](https://npmjs.org/) is roughly analoguos to [Maven](http://maven.apache.org/)
+* [npm](https://npmjs.org/) is roughly analogous to [Maven](http://maven.apache.org/)
 * [Grunt](http://gruntjs.com/) is a task manager similar to [Ant](http://ant.apache.org/)
 * Yeoman is a scaffolding tool, sort of like [Maven Archetype](http://maven.apache.org/guides/introduction/introduction-to-archetypes.html)
 * Express.js is (very rough comparison here) like [Spring MVC](http://docs.spring.io/spring/docs/3.2.x/spring-framework-reference/html/mvc.html), at least in exposing routes.

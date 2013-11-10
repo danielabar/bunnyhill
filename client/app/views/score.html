@@ -1,9 +1,37 @@
 <h3>Your Score for: {{name}}</h3>
+
+<!-- Summary -->
 <div class="row">
 	<div class="span6">
 		<span class="badge badge-success">{{scoreBoard.score}}</span> correct out of <span class="badge badge-info">{{scoreBoard.outOf}}</span>
 	</div>
 </div>
+
+<!-- Details -->
+<div class="row">
+	<div class="span12">
+		<table class="table">
+			<tbody>
+				<tr>
+					<th>Mark</th>
+					<th>Value</th>
+					<th>Translated</th>
+				</tr>
+				<tr ng-repeat="card in scoreBoard.correctCards">
+					<td><span class="badge badge-success">&#x2713;</span></td>
+					<td>{{card.value}}</td>
+					<td>{{card.translated}}</td>
+				</tr><tr ng-repeat="card in scoreBoard.incorrectCards">
+					<td><span class="badge badge-important">&#x2718;</span></td>
+					<td>{{card.value}}</td>
+					<td>{{card.translated}}</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</div>
+
+<!-- Actions -->
 <div class="row">
 	<div class="span6">
 		<a ng-href="#/game/{{name}}">Play Again</a>

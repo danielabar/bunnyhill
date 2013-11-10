@@ -1,7 +1,7 @@
 bunnyhill
 =========
 
-Resources and practice for JavaScript developers getting started with the MEAN stack.
+Resources and practice for JavaScript developers getting started with the **MEAN** stack.
 
 **M:** [MongoDB](http://www.mongodb.org/) Open-source NoSQL document database.
 

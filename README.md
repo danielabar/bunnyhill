@@ -3,22 +3,27 @@ bunnyhill
 
 Resources and practice for JavaScript developers getting started with the MEAN stack.
 
-M: MongoDB
+M: [MongoDB](http://www.mongodb.org/) Open-source NoSQL document database.
 
-E: Express
+E: [Express](http://expressjs.com/) Web Application Framework for Node.
 
-A: Angular
+A: [Angular](http://angularjs.org/) JavaScript MVC Framework for the client side.
 
-N: Node
+N: [Node](http://nodejs.org/) JavaScript for the server side. A platform built on [Chrome's JavaScript runtime](https://code.google.com/p/v8/) for easily building fast, scalable network applications
 
-The following documentation will walk you through the steps of installation and project setup.
+The following documentation will walk you through the steps of setting up your development environment and getting up and running with the sample project in this repo.
 The section on Learning Resources provides links to learn more about each of the tools and technologies used.
 
-## Install Tools
-* [MongoDB](http://docs.mongodb.org/manual/installation/)
-* [Sublime Text 2](http://www.sublimetext.com/2)
-* [Git](http://git-scm.com/downloads)
-* [Node.js](http://nodejs.org/)
+## Tooling: Setup Your Development Environment
+* Install [MongoDB](http://docs.mongodb.org/manual/installation/)
+* Install [Sublime Text 2](http://www.sublimetext.com/2)
+* Install [Node.js](http://nodejs.org/)
+* Install [Git](http://git-scm.com/downloads)
+* Install [Batarang](https://chrome.google.com/webstore/detail/angularjs-batarang/ighdmehidhipcmcojjgiloacoafjmpfk?hl=en) A Chrome extension to debug Angular applications.
+
+### Optional Tools
+* If you prefer to use a GUI for Git version control, install [SourceTree](http://www.sourcetreeapp.com/)
+* A GUI tool for inspecting and managing your Mongo database, install [Robomongo](http://robomongo.org/)
 
 ## Install Node Modules
 Now that you have node installed, open a terminal window (Mac/Linux) or command window (Windows) and run these commands to install node modules globally.
@@ -35,10 +40,14 @@ Windows users may need to open the the command window as Administrator.
 	```
 
 ## Project Setup
+* If you don't already have one, [Sign up for a Github account](https://github.com/). Strictly speaking, you don't need one just to clone a repo, but you will need an account to create your own repos and collaborate with others.
 * ```cd``` to your ```projects``` directory
-* ```https://github.com/danielabar/bunnyhill.git```
+* ```git clone https://github.com/danielabar/bunnyhill.git```
 * ```cd bunnyhill```
 * ```npm install```
+* ```cd dbinit```
+* ```mongoimport -d langfun -c decks --type json --jsonArray --drop decks.json```
+* ```cd ..```
 * ```grunt test```
 * ```nodemon server.js```
 * Launch a browser and enter [http://localhost:3000](http://localhost:3000)
@@ -53,7 +62,7 @@ Windows users may need to open the the command window as Administrator.
 	```
 		{
 		"folders": [{
-			"path": "/Users/dbaron/projects/bunnyhill"
+			"path": "<path to your project here, it will already be filled in for you>"
 		}],
 		"settings": {
 			"tab_size": 2,
@@ -69,6 +78,7 @@ Windows users may need to open the the command window as Administrator.
 * [Pro Git e-book](http://git-scm.com/book)
 * [Sublime Text 2 Free Video Course](http://net.tutsplus.com/articles/news/perfect-workflow-in-sublime-text-free-course/) A series of short screencasts.
 * [Sublime Text 2 Unofficial Documentation](http://sublime-text-unofficial-documentation.readthedocs.org/en/sublime-text-2/)
-* [Angular Phonecat Tutorial](http://docs.angularjs.org/tutorial)
+* [Angular Phonecat Tutorial](http://docs.angularjs.org/tutorial) Build a phone catalogue app with Angular. Excellent step-by-step instructions and explanation of Angular concepts.
 * [The Art of Node](https://github.com/maxogden/art-of-node) A short introduction to Node.js
+* [Express Guide](http://expressjs.com/guide.html)
 * [The Little MongoDB Book](http://openmymind.net/mongodb.pdf)

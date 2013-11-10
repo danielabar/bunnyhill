@@ -3,16 +3,16 @@ bunnyhill
 
 Resources and practice for JavaScript developers getting started with the MEAN stack.
 
-M: [MongoDB](http://www.mongodb.org/) Open-source NoSQL document database.
+**M:** [MongoDB](http://www.mongodb.org/) Open-source NoSQL document database.
 
-E: [Express](http://expressjs.com/) Web Application Framework for Node.
+**E:** [Express](http://expressjs.com/) Web Application Framework for Node.
 
-A: [Angular](http://angularjs.org/) JavaScript MVC Framework for the client side.
+**A:** [Angular](http://angularjs.org/) JavaScript MVC Framework for the client side.
 
-N: [Node](http://nodejs.org/) JavaScript for the server side. A platform built on [Chrome's JavaScript runtime](https://code.google.com/p/v8/) for easily building fast, scalable network applications
+**N:** [Node](http://nodejs.org/) JavaScript for the server side. A platform built on [Chrome's JavaScript runtime](https://code.google.com/p/v8/).
 
 The following documentation will walk you through the steps of setting up your development environment and getting up and running with the sample project in this repo.
-The section on Learning Resources provides links to learn more about each of the tools and technologies used.
+The section on [Learning Resources](#learning-resources) provides links to learn more about each of the tools and technologies used.
 
 ## Tooling: Setup Your Development Environment
 * Install [MongoDB](http://docs.mongodb.org/manual/installation/)
@@ -73,7 +73,7 @@ Windows users may need to open the the command window as Administrator.
 	}
 	```
 
-## Learning Resources
+## <a name="learning-resources"/>Learning Resources
 * [Git Simple Guide](http://rogerdudler.github.io/git-guide/) Just the basics, get started quickly.
 * [Pro Git e-book](http://git-scm.com/book)
 * [Sublime Text 2 Free Video Course](http://net.tutsplus.com/articles/news/perfect-workflow-in-sublime-text-free-course/) A series of short screencasts.

@@ -42,7 +42,7 @@ Windows users may need to open the the command window as Administrator.
 
 ## Project Setup
 1. If you don't already have one, [Sign up for a Github account](https://github.com/). Strictly speaking, you don't need one just to clone a repo, but you will need an account to create your own repos and collaborate with others.
-1. ```cd``` to your ```projects``` directory
+1. Open a terminal or command window and ```cd``` to your ```projects``` directory. The remaining steps are to be run at the command line.
 1. ```git clone https://github.com/danielabar/bunnyhill.git```
 1. ```cd bunnyhill```
 1. ```npm install```

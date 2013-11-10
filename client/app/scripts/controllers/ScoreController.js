@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('meanRecipieApp')
-	.controller('ScoreCtrl', function($scope, $routeParams, GameService, $location) {
+	.controller('ScoreCtrl', function($scope, $routeParams, GameService, $location, localStorageService) {
 
 		$scope.name = $routeParams.name;
 
@@ -11,7 +11,10 @@ angular.module('meanRecipieApp')
 		
 		$scope.scoreBoard = GameService.getScoreBoard();
 		if(isEmpty($scope.scoreBoard)) {
-			$location.path('/');
+			$scope.scoreBoard = angular.fromJson(localStorageService.get($scope.name));
+			if(isEmpty($scope.scoreBoard)) {
+				$location.path('/');
+			}
 		}
 
 	});

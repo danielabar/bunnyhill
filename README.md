@@ -13,11 +13,12 @@ Resources and practice for JavaScript developers getting started with the MEAN s
 
 The following documentation will walk you through the steps of setting up your development environment and getting up and running with the sample project in this repo.
 The section on [Learning Resources](#learning-resources) provides links to learn more about each of the tools and technologies used.
+Also specifically for Java Developers, see the [section](#java-comparison) on comparisons.
 
 ## Tooling: Setup Your Development Environment
 * Install [MongoDB](http://docs.mongodb.org/manual/installation/)
 * Install [Sublime Text 2](http://www.sublimetext.com/2)
-* Install [Node.js](http://nodejs.org/)
+* Install [Node.js](http://nodejs.org/). This will automatically also install [npm](https://npmjs.org/), the official package manager for Node.js.
 * Install [Git](http://git-scm.com/downloads)
 * Install [Batarang](https://chrome.google.com/webstore/detail/angularjs-batarang/ighdmehidhipcmcojjgiloacoafjmpfk?hl=en), a Chrome extension to debug Angular applications.
 
@@ -49,7 +50,7 @@ Windows users may need to open the the command window as Administrator.
 * ```mongoimport -d langfun -c decks --type json --jsonArray --drop decks.json```
 * ```cd ..```
 * ```grunt test```
-* ```nodemon server.js```
+* ```nodemon server.js``` Nodemon will watch for file changes and automatically redeploy so you never need to restart your Node server.
 * Launch a browser and enter [http://localhost:3000](http://localhost:3000)
 
 ## Configure Project Settings
@@ -82,3 +83,11 @@ Windows users may need to open the the command window as Administrator.
 * [The Art of Node](https://github.com/maxogden/art-of-node) A short introduction to Node.js
 * [Express Guide](http://expressjs.com/guide.html)
 * [The Little MongoDB Book](http://openmymind.net/mongodb.pdf)
+* [Yeoman Angular Generator](https://github.com/yeoman/generator-angular) Used by this project to scaffold and add Angular components such as routes, controllers, services and directives.
+* [Yeoman, Grunt and Bower](http://yeoman.io/) Tooling used to manage the client side.
+
+### <a name="java-comparison"/>For those coming from the Java world...
+* [npm](https://npmjs.org/) is roughly analoguos to [Maven](http://maven.apache.org/)
+* [Grunt](http://gruntjs.com/) is a task manager similar to [Ant](http://ant.apache.org/)
+* Yeoman is a scaffolding tool, sort of like [Maven Archetype](http://maven.apache.org/guides/introduction/introduction-to-archetypes.html)
+* Express.js is (very rough comparison here) like [Spring MVC](http://docs.spring.io/spring/docs/3.2.x/spring-framework-reference/html/mvc.html), at least in exposing routes.

@@ -19,11 +19,11 @@ The section on [Learning Resources](#learning-resources) provides links to learn
 * Install [Sublime Text 2](http://www.sublimetext.com/2)
 * Install [Node.js](http://nodejs.org/)
 * Install [Git](http://git-scm.com/downloads)
-* Install [Batarang](https://chrome.google.com/webstore/detail/angularjs-batarang/ighdmehidhipcmcojjgiloacoafjmpfk?hl=en) A Chrome extension to debug Angular applications.
+* Install [Batarang](https://chrome.google.com/webstore/detail/angularjs-batarang/ighdmehidhipcmcojjgiloacoafjmpfk?hl=en), a Chrome extension to debug Angular applications.
 
 ### Optional Tools
-* If you prefer to use a GUI for Git version control, install [SourceTree](http://www.sourcetreeapp.com/)
-* A GUI tool for inspecting and managing your Mongo database, install [Robomongo](http://robomongo.org/)
+* If you prefer to use a GUI for Git version control, install [SourceTree](http://www.sourcetreeapp.com/). *Bonus: It also works for BitBucket/Mercurial repos.*
+* If you prefer to use a GUI for inspecting and managing your Mongo database, install [Robomongo](http://robomongo.org/)
 
 ## Install Node Modules
 Now that you have node installed, open a terminal window (Mac/Linux) or command window (Windows) and run these commands to install node modules globally.

@@ -7,6 +7,9 @@ angular.module('meanRecipieApp')
 		$scope.game = GameService.getGame();
 		$scope.scoreBoard = GameService.getScoreBoard();
 
+		// experimenting with audio
+		$scope.playSuccessSound = false;
+
 		// If user refreshed page, GameService state is lost, refetch the deck from api
 		if (!$scope.game.deck) {
 			var deck = Deck.get({
@@ -23,6 +26,11 @@ angular.module('meanRecipieApp')
 
 		$scope.checkGuess = function() {
 			var result = GameService.checkGuess($scope.currentCard, $scope.guess);
+
+			// experimenting with audio
+			$scope.playSuccessSound = result;
+			console.log('controller set playSuccessSound to: ' + $scope.playSuccessSound);
+
 			$scope.scoreBoard = GameService.updateScoreBoard(result, $scope.currentCard);
 			$scope.feedback = GameService.buildFeedback(result, $scope.currentCard);
 			moveAhead();

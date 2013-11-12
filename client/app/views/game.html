@@ -21,15 +21,15 @@
 	</div>
 	<div class="row">
 		<div class="span2">
-			Enter Your Translation
+			
 		</div>
 		<div class="span2">
-			<input type="text" ng-model="guess" focus-me="focusInput" ng-change="clearFeedback()" />
+			<input type="text" placeholder="Enter your translation" ng-model="guess" focus-me="focusInput" ng-change="clearFeedback()" />
 		</div>
 	</div>
 	<div class="row">
-		<div class="span2">
-			<button ng-click="checkGuess(); focusInput=true" type="button" class="btn btn-info">Check</button>
+		<div class="span2 pull-right">
+			<button ng-click="checkGuess(); focusInput=true" type="button" class="btn btn-primary">Check</button>
 		</div>
 	</div>
 </div>
@@ -40,22 +40,15 @@
 	</div>
 </div>
 
-
-<!-- <div class="row">
-	<div class="span2">
-		{{currentCard.value}}
-	</div>
-	<div class="span2">
-		<input type="text" ng-model="guess" focus-me="focusInput" ng-change="clearFeedback()" />
-	</div>
-	<div class="span2">
-		<button ng-click="checkGuess(); focusInput=true" type="button" class="btn btn-info">Check</button>
-	</div>
-	<div class="span3">
-		<span>Score: {{scoreBoard.score}} correct out of {{scoreBoard.outOf}}</span>
-	</div>
+<!-- Audio Experiment -->
+<audio id="game-sound" game-audio playsound="{{playSuccessSound}}" src="sounds/clong-1.mp3"></audio>
+<!-- <audio id="demo" src="sounds/clong-1.mp3"></audio>
+<div>
+  <button onclick="document.getElementById('demo').play()">Play the Audio</button>
+  <button onclick="document.getElementById('demo').pause()">Pause the Audio</button>
+  <button onclick="document.getElementById('demo').volume+=0.1">Increase Volume</button>
+  <button onclick="document.getElementById('demo').volume-=0.1">Decrease Volume</button>
 </div> -->
-
 
 <!-- DEBUG -->
 <div class="row debug-toggle">

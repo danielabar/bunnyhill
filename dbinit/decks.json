@@ -31,5 +31,41 @@
 			{"value": "today", "translated": "oggi"},
 			{"value": "tomorrow", "translated": "domani"}
 		]
+	},
+	{
+		"name": "Nouns Pluralization", 
+		"language": "Italian", 
+		"cards": [
+			{"value": "boy", "translated": "ragazzo"}, 
+			{"value": "boys", "translated": "ragazzi", "help": "Masculine nouns ending in o are pluralized by ending with an i"},
+			{"value": "book", "translated": "libro"},
+			{"value": "books", "translated": "libri", "help": "Masculine nouns ending in o are pluralized by ending with an i"},
+			{"value": "doctor", "translated": "dottore"},
+			{"value": "doctors", "translated": "dottori", "help": "Masculine nouns ending in e are pluralized by ending with an i"},
+			{"value": "teacher", "translated": "insegnante"},
+			{"value": "teachers", "translated": "insegnanti", "help": "Masculine nouns ending in e are pluralized by ending with an i"},
+			{"value": "girl", "translated": "ragazza"},
+			{"value": "girls", "translated": "ragazze", "help": "Feminine nounds ending in a are pluralized by ending with an e"},
+			{"value": "friend", "translated": "amica"},
+			{"value": "friends", "translated": "amiche", "help": "Feminine nounds ending in a are pluralized by ending with an e"},
+			{"value": "mother", "translated": "madre"},
+			{"value": "mothers", "translated": "madri", "help": "Feminine nounds ending in e are pluralized by ending with an i"},
+			{"value": "night", "translated": "notte"},
+			{"value": "nights", "translated": "notti", "help": "Feminine nounds ending in e are pluralized by ending with an i"}
+		]
+	},
+	{
+		"name": "Definite Articles", 
+		"language": "Italian", 
+		"cards": [
+			{"value": "a book", "translated": "un libro", "help": "un is for masculine nouns not starting with s+consonant, ps, pn, or gn"}, 
+			{"value": "a tree", "translated": "un albero", "help": "un is for masculine nouns not starting with s+consonant, ps, pn, or gn"},
+			{"value": "a girl", "translated": "una ragazza", "help": "una is used for feminine nouns starting with a consonant"},
+			{"value": "an aunt", "translated": "una zia", "help": "una is used for feminine nouns starting with a consonant"},
+			{"value": "a tire", "translated": "uno pneumatico", "help": "uno is for masculine nouns starting with s+consonant, ps, pn, or gn"},
+			{"value": "a gnome", "translated": "uno gnome", "help": "uno is for masculine nouns starting with s+consonant, ps, pn, or gn"},
+			{"value": "a female friend", "translated": "un'amica", "help": "un' is used for feminine nouns starting with a vowel"},
+			{"value": "an hour", "translated": "un'ora", "help": "un' is used for feminine nouns starting with a vowel"}
+		]
 	}
 ]

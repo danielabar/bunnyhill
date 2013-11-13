@@ -26,6 +26,7 @@ angular.module('meanRecipieApp')
 
 		$scope.checkGuess = function() {
 			var result = GameService.checkGuess($scope.currentCard, $scope.guess);
+			$scope.result = result;
 
 			// experimenting with audio
 			$scope.playSuccessSound = result;
@@ -34,6 +35,14 @@ angular.module('meanRecipieApp')
 			$scope.scoreBoard = GameService.updateScoreBoard(result, $scope.currentCard);
 			$scope.feedback = GameService.buildFeedback(result, $scope.currentCard);
 			moveAhead();
+		}
+
+		$scope.getAlertType = function() {
+			if (!$scope.result) {
+				return "alert alert-error";
+			} else {
+				return "alert alert-success";
+			}
 		}
 
 		$scope.clearFeedback = function() {

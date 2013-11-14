@@ -4,6 +4,7 @@ angular.module('meanRecipieApp', [
 	'ngCookies',
 	'ngResource',
 	'ngSanitize',
+	'ui.bootstrap',
 	'LocalStorageModule'
 ])
 	.config(function($routeProvider) {

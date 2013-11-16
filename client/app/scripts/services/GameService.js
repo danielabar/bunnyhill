@@ -16,6 +16,7 @@ angular.module('meanRecipieApp')
 
 			initScoreBoard: function() {
 				cardIndex = 0;
+				game.scoreBoard.playedDate = new Date();
 				game.scoreBoard.score = 0;
 				game.scoreBoard.incorrectCards = [];
 				game.scoreBoard.correctCards = [];

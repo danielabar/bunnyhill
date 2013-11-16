@@ -14,3 +14,7 @@ db.once('open', function callback() {
 var DeckModel = mongoose.model('Deck', new mongoose.Schema({}, {
 	strict: false
 }));
+
+var ScoreModel = mongoose.model('Score', new mongoose.Schema({}, {
+	strict: false
+}));

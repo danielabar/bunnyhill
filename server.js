@@ -2,6 +2,7 @@ var express = require('express');
 var logger = require('./server/lib/log');
 var db = require('./server/lib/db');
 var deck = require('./server/routes/deck');
+var score = require('./server/routes/score');
 var http = require('http');
 var path = require('path');
 
@@ -22,6 +23,8 @@ if ('development' == app.get('env')) {
 
 app.get('/deck', deck.get);
 app.get('/deck/:name', deck.getByName);
+app.get('/score', score.get);
+app.post('/score', score.post);
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));

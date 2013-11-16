@@ -1,4 +1,5 @@
 var mongoose = require('mongoose');
+var logger = require('../lib/log');
 var Deck = mongoose.model('Deck');
 
 exports.get = function(req, res) {
@@ -8,7 +9,7 @@ exports.get = function(req, res) {
 			logger.error(module + ' get all deck err: ' + err);
 			res.send(err);
 		} else {
-			console.log('data to be returned: ' + JSON.stringify(data));
+			logger.info('data to be returned: ' + JSON.stringify(data));
 			res.json(data);
 		}
 	});
@@ -23,6 +24,7 @@ exports.getByName = function(req, res) {
 			logger.error(module + ' get deck by name err=' + err);
 			res.send(err);
 		} else {
+			logger.info('data to be returned: ' + JSON.stringify(data));
 			res.send(data);
 		}
 	});

@@ -57,6 +57,7 @@ angular.module('meanRecipieApp')
 				$scope.incorrect = false;
 				$scope.guess = " ";
 			} else {
+				GameService.saveScoreBoard();
 				$location.path('/score/' + $scope.name);
 			}
 		}

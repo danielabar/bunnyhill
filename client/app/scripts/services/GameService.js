@@ -1,14 +1,14 @@
 'use strict';
 
 angular.module('meanRecipieApp')
-	.factory('GameService', function(localStorageService) {
+	.factory('GameService', function(localStorageService, ScoreResource) {
 
 		var game = {
 			scoreBoard: {}
 		};
 		var cardIndex = 0;
 
-		var saveScoreboard = function() {
+		var saveScoreboardLocal = function() {
 			localStorageService.add(game.deck.name, angular.toJson(game.scoreBoard));
 		};
 
@@ -51,7 +51,6 @@ angular.module('meanRecipieApp')
 				}
 			},
 
-			// Nice to have: save in LocalStorage: date, game.deck.name, scoreBoard
 			updateScoreBoard: function(guessResult, card) {
 				if (guessResult) {
 					game.scoreBoard.score += 1;
@@ -59,12 +58,16 @@ angular.module('meanRecipieApp')
 				} else {
 					game.scoreBoard.incorrectCards.push(card);
 				}
-				saveScoreboard();
+				saveScoreboardLocal();
 				return game.scoreBoard;
 			},
 
 			getScoreBoard: function() {
 				return game.scoreBoard;
+			},
+
+			saveScoreBoard: function() {
+				ScoreResource.save(game.scoreBoard);
 			},
 
 			buildFeedback: function(result, card) {

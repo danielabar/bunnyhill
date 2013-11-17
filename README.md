@@ -91,3 +91,10 @@ Windows users may need to open the the command window as Administrator.
 * [Grunt](http://gruntjs.com/) is a task manager similar to [Ant](http://ant.apache.org/)
 * [Yeoman](http://yeoman.io/) is a scaffolding tool, sort of like [Maven Archetype](http://maven.apache.org/guides/introduction/introduction-to-archetypes.html)
 * [Express.js](http://expressjs.com/) is (very rough comparison here) like [Spring MVC](http://docs.spring.io/spring/docs/3.2.x/spring-framework-reference/html/mvc.html), at least in exposing routes. For the Rails folks, a more apt comparison is Express is to Node what Sinatra is to Rails.
+
+## Animations
+The yeoman angular generator installs Angular 1.0.8. However, to use animations, this project has been upgraded to [Angular 1.2.1](http://code.angularjs.org/1.2.1/docs/api).
+Also [animate.css](https://daneden.me/animate/) has been added to make use of super cool keyframe animations. 
+To learn more about Angular and animations, see:
+* [Remastered Animation in Angular 1.2](http://www.yearofmoo.com/2013/08/remastered-animation-in-angularjs-1-2.html)
+* [Get Moving with Angular 1.2 Animation and Animate.css](http://www.divshot.com/blog/tips-and-tricks/angular-1-2-and-animate-css/)

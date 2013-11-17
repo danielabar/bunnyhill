@@ -5,6 +5,7 @@ angular.module('meanRecipieApp', [
 	'ngCookies',
 	'ngResource',
 	'ngSanitize',
+	'ngAnimate',
 	'ui.bootstrap',
 	'LocalStorageModule'
 ])

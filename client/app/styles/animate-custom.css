@@ -29,7 +29,7 @@
   transition:0.5s linear all;
 
   position:absolute;
-  top:0;
+  /*top:120;*/
   left:0;
   right:0;
   height:600px;
@@ -37,20 +37,20 @@
 
 .my-slide-animation.ng-enter {
   z-index:100;
-  top:600px;
+  left:800px;
   opacity:0;
 }
 .my-slide-animation.ng-enter.ng-enter-active {
-  top:0;
+  left:0;
   opacity:1;
 }
 
 .my-slide-animation.ng-leave {
   z-index:101;
-  top:0;
+  left:0;
   opacity:1;
 }
 .my-slide-animation.ng-leave.ng-leave-active {
-  top:-600px;
+  left:-800px;
   opacity:0;
 }

@@ -1,6 +1,7 @@
 'use strict';
 
 angular.module('meanRecipieApp', [
+	'ngRoute',
 	'ngCookies',
 	'ngResource',
 	'ngSanitize',

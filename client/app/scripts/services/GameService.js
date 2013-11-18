@@ -20,6 +20,7 @@ angular.module('meanRecipieApp')
 				game.scoreBoard.score = 0;
 				game.scoreBoard.incorrectCards = [];
 				game.scoreBoard.correctCards = [];
+				game.scoreBoard.deckName = "";
 				if (game.deck) {
 					game.scoreBoard.outOf = game.deck.cards.length;
 				}
@@ -59,6 +60,7 @@ angular.module('meanRecipieApp')
 				} else {
 					game.scoreBoard.incorrectCards.push(card);
 				}
+				game.scoreBoard.deckName = game.deck.name;
 				saveScoreboardLocal();
 				return game.scoreBoard;
 			},

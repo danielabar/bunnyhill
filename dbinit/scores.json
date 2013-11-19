@@ -1,0 +1,346 @@
+[
+  {
+    "playedDate": "2013-11-18T04:01:58.346Z",
+    "score": 6,
+    "incorrectCards": [
+      {
+        "translated": "sei",
+        "value": "six"
+      },
+      {
+        "translated": "sette",
+        "value": "seven"
+      },
+      {
+        "translated": "otto",
+        "value": "eight"
+      },
+      {
+        "translated": "nove",
+        "value": "nine"
+      },
+      {
+        "translated": "dieci",
+        "value": "ten"
+      }
+    ],
+    "correctCards": [
+      {
+        "translated": "zero",
+        "value": "zero"
+      },
+      {
+        "translated": "uno",
+        "value": "one"
+      },
+      {
+        "translated": "due",
+        "value": "two"
+      },
+      {
+        "translated": "tre",
+        "value": "three"
+      },
+      {
+        "translated": "quattro",
+        "value": "four"
+      },
+      {
+        "translated": "cinque",
+        "value": "five"
+      }
+    ],
+    "deckName": "Numbers",
+    "outOf": 11
+  },
+  {
+    "playedDate": "2013-11-19T03:47:45.504Z",
+    "score": 10,
+    "incorrectCards": [
+      {
+        "translated": "zero",
+        "value": "zero"
+      }
+    ],
+    "correctCards": [
+      {
+        "translated": "uno",
+        "value": "one"
+      },
+      {
+        "translated": "due",
+        "value": "two"
+      },
+      {
+        "translated": "tre",
+        "value": "three"
+      },
+      {
+        "translated": "quattro",
+        "value": "four"
+      },
+      {
+        "translated": "cinque",
+        "value": "five"
+      },
+      {
+        "translated": "sei",
+        "value": "six"
+      },
+      {
+        "translated": "sette",
+        "value": "seven"
+      },
+      {
+        "translated": "otto",
+        "value": "eight"
+      },
+      {
+        "translated": "nove",
+        "value": "nine"
+      },
+      {
+        "translated": "dieci",
+        "value": "ten"
+      }
+    ],
+    "deckName": "Numbers",
+    "outOf": 11
+  },
+  {
+    "playedDate": "2013-11-19T03:47:45.504Z",
+    "score": 4,
+    "incorrectCards": [
+      {
+        "translated": "zero",
+        "value": "zero"
+      },
+      {
+        "translated": "quattro",
+        "value": "four"
+      },
+      {
+        "translated": "cinque",
+        "value": "five"
+      },
+      {
+        "translated": "sei",
+        "value": "six"
+      },
+      {
+        "translated": "sette",
+        "value": "seven"
+      },
+      {
+        "translated": "otto",
+        "value": "eight"
+      },
+      {
+        "translated": "nove",
+        "value": "nine"
+      }
+    ],
+    "correctCards": [
+      {
+        "translated": "uno",
+        "value": "one"
+      },
+      {
+        "translated": "due",
+        "value": "two"
+      },
+      {
+        "translated": "tre",
+        "value": "three"
+      },      
+      {
+        "translated": "dieci",
+        "value": "ten"
+      }
+    ],
+    "deckName": "Numbers",
+    "outOf": 11
+  },
+  {
+    "playedDate": "2013-11-19T00:10:12.548Z",
+    "score": 10,
+    "incorrectCards": [],
+    "correctCards": [
+    	{
+        "translated": "lunedi",
+        "value": "Monday"
+      },
+      {
+        "translated": "martedi",
+        "value": "Tuesday"
+      },
+      {
+        "translated": "mercoledi",
+        "value": "Wednesday"
+      },
+      {
+        "translated": "giovedi",
+        "value": "Thursday"
+      },
+      {
+        "translated": "venerdi",
+        "value": "Friday"
+      },
+      {
+        "translated": "sabato",
+        "value": "Saturday"
+      },
+      {
+        "translated": "domenica",
+        "value": "Sunday"
+      },
+      {
+        "translated": "ieri",
+        "value": "yesterday"
+      },
+      {
+        "translated": "oggi",
+        "value": "today"
+      },
+      {
+        "translated": "domani",
+        "value": "tomorrow"
+      }
+    ],
+    "deckName": "Days of the Week",
+    "outOf": 10
+  },
+  {
+    "playedDate": "2013-11-19T03:46:26.344Z",
+    "score": 2,
+    "incorrectCards": [
+      {
+        "translated": "libro",
+        "value": "book"
+      },
+      {
+        "help": "Masculine nouns ending in o are pluralized by ending with an i",
+        "translated": "libri",
+        "value": "books"
+      },
+      {
+        "translated": "dottore",
+        "value": "doctor"
+      },
+      {
+        "help": "Masculine nouns ending in e are pluralized by ending with an i",
+        "translated": "dottori",
+        "value": "doctors"
+      },
+      {
+        "translated": "insegnante",
+        "value": "teacher"
+      },
+      {
+        "help": "Masculine nouns ending in e are pluralized by ending with an i",
+        "translated": "insegnanti",
+        "value": "teachers"
+      },
+      {
+        "translated": "ragazza",
+        "value": "girl"
+      },
+      {
+        "help": "Feminine nounds ending in a are pluralized by ending with an e",
+        "translated": "ragazze",
+        "value": "girls"
+      },
+      {
+        "translated": "amica",
+        "value": "friend"
+      },
+      {
+        "help": "Feminine nounds ending in a are pluralized by ending with an e",
+        "translated": "amiche",
+        "value": "friends"
+      },
+      {
+        "translated": "madre",
+        "value": "mother"
+      },
+      {
+        "help": "Feminine nounds ending in e are pluralized by ending with an i",
+        "translated": "madri",
+        "value": "mothers"
+      },
+      {
+        "translated": "notte",
+        "value": "night"
+      },
+      {
+        "help": "Feminine nounds ending in e are pluralized by ending with an i",
+        "translated": "notti",
+        "value": "nights"
+      }
+    ],
+    "correctCards": [
+      {
+        "translated": "ragazzo",
+        "value": "boy"
+      },
+      {
+        "help": "Masculine nouns ending in o are pluralized by ending with an i",
+        "translated": "ragazzi",
+        "value": "boys"
+      }
+    ],
+    "deckName": "Nouns Pluralization",
+    "outOf": 16
+  },
+  
+  {
+    "playedDate": "2013-11-19T03:56:44.226Z",
+    "score": 4,
+    "incorrectCards": [
+      {
+        "help": "uno is for masculine nouns starting with s+consonant, ps, pn, or gn",
+        "translated": "uno pneumatico",
+        "value": "a tire"
+      },
+      {
+        "help": "uno is for masculine nouns starting with s+consonant, ps, pn, or gn",
+        "translated": "uno gnome",
+        "value": "a gnome"
+      },
+      {
+        "help": "un' is used for feminine nouns starting with a vowel",
+        "translated": "un'amica",
+        "value": "a female friend"
+      },
+      {
+        "help": "un' is used for feminine nouns starting with a vowel",
+        "translated": "un'ora",
+        "value": "an hour"
+      }
+    ],
+    "correctCards": [
+      {
+        "help": "un is for masculine nouns not starting with s+consonant, ps, pn, or gn",
+        "translated": "un libro",
+        "value": "a book"
+      },
+      {
+        "help": "un is for masculine nouns not starting with s+consonant, ps, pn, or gn",
+        "translated": "un albero",
+        "value": "a tree"
+      },
+      {
+        "help": "una is used for feminine nouns starting with a consonant",
+        "translated": "una ragazza",
+        "value": "a girl"
+      },
+      {
+        "help": "una is used for feminine nouns starting with a consonant",
+        "translated": "una zia",
+        "value": "an aunt"
+      }
+    ],
+    "deckName": "Definite Articles",
+    "outOf": 8
+  }
+]

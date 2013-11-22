@@ -48,6 +48,7 @@ Windows users may need to open the the command window as Administrator.
 1. ```npm install```
 1. ```cd dbinit```
 1. ```mongoimport -d langfun -c decks --type json --jsonArray --drop decks.json```
+1. ```mongoimport -d langfun -c scores --type json --jsonArray --drop scores.json```
 1. ```cd ..```
 1. ```grunt test```
 1. ```nodemon server.js``` Nodemon will watch for file changes and automatically redeploy so you never need to restart your Node server.

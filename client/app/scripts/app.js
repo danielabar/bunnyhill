@@ -23,6 +23,10 @@ angular.module('meanRecipieApp', [
 				templateUrl: 'views/score.html',
 				controller: 'ScoreCtrl'
 			})
+			.when('/myscores', {
+			  templateUrl: 'views/myscores.html',
+			  controller: 'MyScoresController'
+			})
 			.otherwise({
 				redirectTo: '/'
 			});

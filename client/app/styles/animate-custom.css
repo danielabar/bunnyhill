@@ -19,6 +19,24 @@
   animation: shake 1s;
 }
 
+.card-flip {
+	position: relative;
+}
+
+.card-flip.ng-enter {
+	-webkit-animation: flipInY 1s;
+  -moz-animation: flipInY 1s;
+  -ms-animation: flipInY 1s;
+  animation: flipInY 1s;
+}
+
+/*.card-flip.ng-leave {
+	-webkit-animation: flipOutY 1s;
+  -moz-animation: flipOutY 1s;
+  -ms-animation: flipOutY 1s;
+  animation: flipOutY 1s;
+}*/
+
 .my-slide-container {
   position:relative;
 }

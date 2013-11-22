@@ -11,32 +11,31 @@
 	</div>
 </div>
 
-<!-- Card -->
-<div class="card">
+<div ng-repeat="card in game.deck.cards | filter:{value:currentCard.value}" class="card card-flip">
 	<div class="row">
 		<div class="span2">
 			Card Says
 		</div>
 		<div class="span2">
-			{{currentCard.value}}
+			{{card.value}}
 		</div>
 		<div class="span1">
-			<i ng-show="currentCard.help" popover="{{currentCard.help}}" popover-trigger="mouseenter" class="icon-question-sign"></i> 
-		</div>
-	</div>
-	<div class="row">
-		<div class="span2">
-		</div>
-		<div class="span2">
-			<input type="text" placeholder="Enter your translation" ng-model="guess" focus-me="focusInput" ng-change="clearFeedback()" />
-		</div>
-	</div>
-	<div class="row">
-		<div class="span2 pull-right">
-			<button ng-click="checkGuess(); focusInput=true" type="button" class="btn btn-primary">Check</button>
+			<i ng-show="card.help" popover="{{card.help}}" popover-trigger="mouseenter" class="icon-question-sign"></i> 
 		</div>
 	</div>
 </div>
+	
+<div class="row">
+	<div class="span2">
+	</div>
+	<div class="span2">
+		<input type="text" placeholder="Enter your translation" ng-model="guess" focus-me="focusInput" ng-change="clearFeedback()" />
+	</div>
+	<div class="span2">
+		<button ng-click="checkGuess(); focusInput=true" type="button" class="btn btn-primary">Check</button>
+	</div>
+</div>
+
 
 <div class="row">
 	<div ng-show="feedback" class="span4 my-feedback">

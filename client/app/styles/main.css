@@ -29,8 +29,10 @@ body {
 		padding: 10px;
     border-radius: 6px;
     color: #915D5D;
-    min-height: 44px;
-    width: 48%;
+    font-size: larger;
+    background-color: antiquewhite;
+    min-height: 63px;
+    width: 37%;
     margin: 10px 1%;
     display: inline-block;
     border: 6px solid #0F6E8B;

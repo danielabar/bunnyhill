@@ -75,6 +75,11 @@ Windows users may need to open the the command window as Administrator.
 	}
 	```
 
+## Using LiveReload
+If you want changes to html, css and client side js files automatically reflected in the browser without having to refresh:
+1. Install the [Chrome LiveReload extension](https://chrome.google.com/webstore/detail/livereload/jnihajbhpnppcggbcgedagnkighmdlei?hl=en)
+2. ```grunt watch```
+
 ## <a name="learning-resources"/>Learning Resources
 * [Git Simple Guide](http://rogerdudler.github.io/git-guide/) Just the basics, get started quickly.
 * [Pro Git e-book](http://git-scm.com/book) A free e-book on Git, from basic introduction to advanced topics.

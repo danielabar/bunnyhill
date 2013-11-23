@@ -1,14 +1,13 @@
 'use strict';
 
-// <flashcard card-value="{{card.value}}" cardobject="card" on-destroy="destroy()"></flashcard>
 angular.module('meanRecipieApp')
   .directive('flashcard', function () {
     return {
       restrict: 'E',
       scope: {
-			  value: "@cardValue",								// "@" pass as string, can be interpolated
-			  currentCardObject: "=cardobject",		// "=" data bind this property 
-			  onDestroy: "&"											// "&" pass a function
+			  value: "@cardValue",								
+			  translated: "@cardTranslated",		
+			  flipcard: "@flipCard"											
 			},
       template: '<div class="card">{{value}}</div>',
       link: function (scope, element, attrs) {
@@ -18,9 +17,14 @@ angular.module('meanRecipieApp')
 		    	scope.value = data;
 		    });
 
-		    scope.$watch('cardobject', function(data) {
-        	console.log('FlashCard $watch cardobject: ' + angular.toJson(data));
-		    	scope.cardobject = data;
+		    attrs.$observe('cardTranslated', function(data) {
+        	console.log('FlashCard $observe cardTranslated: ' + angular.toJson(data));
+		    	scope.translated = data;
+		    });
+
+		    attrs.$observe('flipCard', function(data) {
+        	console.log('FlashCard $observe flipCard: ' + angular.toJson(data));
+		    	scope.flipcard = data;
 		    });
 
       }

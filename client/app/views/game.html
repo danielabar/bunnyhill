@@ -43,7 +43,10 @@
 </div>
 
 <h4>Experiment with custom flash card directive</h4>
-<flashcard card-value="{{currentCard.value}}" cardobject="currentCard" on-destroy="destroy()"></flashcard>
+<flashcard card-value="{{currentCard.value}}" 
+	card-translated="{{currentCard.translated}}" 
+	flip-card="{{flipcard}}">
+</flashcard>
 
 <audio id="game-sound" ng-src="{{gameSound}}"></audio>
 

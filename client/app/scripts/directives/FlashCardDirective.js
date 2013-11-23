@@ -1,30 +1,47 @@
 'use strict';
 
+/*
+<div class="span2">
+			How do you say...
+		</div>
+		<div class="span2">
+			{{card.value}}
+		</div>
+*/
+
 angular.module('meanRecipieApp')
-  .directive('flashcard', function () {
+  .directive('flashcard', function ($animate) {
     return {
       restrict: 'E',
       scope: {
+      	message: "=message",
+      	display: "=display",
 			  value: "@cardValue",								
 			  translated: "@cardTranslated",		
 			  flipcard: "@flipCard"											
 			},
-      template: '<div class="card">{{value}}</div>',
+      template: '<div class="card"><div class="span2">{{message}}</div><div class="span2">{{display}}</div></div>',
+      replace: true,
       link: function (scope, element, attrs) {
-        
+
         attrs.$observe('cardValue', function(data) {
-        	console.log('FlashCard $observe cardValue: ' + angular.toJson(data));
-		    	scope.value = data;
+        	scope.message = 'How do you say...';
+		    	scope.display = data;
 		    });
 
 		    attrs.$observe('cardTranslated', function(data) {
-        	console.log('FlashCard $observe cardTranslated: ' + angular.toJson(data));
 		    	scope.translated = data;
 		    });
 
 		    attrs.$observe('flipCard', function(data) {
-        	console.log('FlashCard $observe flipCard: ' + angular.toJson(data));
-		    	scope.flipcard = data;
+        	if(data === 'true') {
+        		scope.message = 'Answer is:';
+        		scope.display = scope.translated;
+        		// Animation not working :-(
+        		$animate.addClass(element, 'animated flipInY', function() {
+            	$animate.removeClass(element, 'animated flipInY');
+          	});
+        	}
 		    });
 
       }

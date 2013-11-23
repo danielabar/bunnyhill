@@ -29,7 +29,7 @@ angular.module('meanRecipieApp')
 			$scope.result = result;
 			$scope.scoreBoard = GameService.updateScoreBoard(result, $scope.currentCard);
 			$scope.feedback = GameService.buildFeedback(result, $scope.currentCard);
-			moveAhead();
+			// moveAhead();
 		}
 
 		var playSound = function(result) {
@@ -52,7 +52,8 @@ angular.module('meanRecipieApp')
 			$scope.feedback = null;
 		}
 
-		var moveAhead = function() {
+		$scope.moveAhead = function() {
+			$scope.flipcard = false;
 			$scope.currentCard = GameService.getNextCard();
 			if ($scope.currentCard) {
 				$scope.correct = false;

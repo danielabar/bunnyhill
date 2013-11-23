@@ -14,7 +14,7 @@
 <div ng-repeat="card in game.deck.cards | filter:{value:currentCard.value}:true" class="card card-flip">
 	<div class="row">
 		<div class="span2">
-			Card Says
+			How do you say...
 		</div>
 		<div class="span2">
 			{{card.value}}
@@ -39,11 +39,15 @@
 <div class="row">
 	<div ng-show="feedback" class="span4 my-feedback">
 		<span ng-show="feedback" ng-class="getAlertType()">{{feedback}}</span>
+		<button ng-click="moveAhead()" type="button" class="btn btn-info">Next</button>
 	</div>
 </div>
 
 <h4>Experiment with custom flash card directive</h4>
-<flashcard card-value="{{currentCard.value}}" 
+<flashcard 
+	message="message"
+	display="display"
+	card-value="{{currentCard.value}}" 
 	card-translated="{{currentCard.translated}}" 
 	flip-card="{{flipcard}}">
 </flashcard>

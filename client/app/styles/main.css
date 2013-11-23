@@ -21,10 +21,6 @@ body {
     letter-spacing: -1px;
 }
 
-.debug-toggle {
-	margin-top: 10px;
-}
-
 .card {
 		padding: 10px;
     border-radius: 6px;

@@ -36,12 +36,14 @@
 	</div>
 </div>
 
-
 <div class="row">
 	<div ng-show="feedback" class="span4 my-feedback">
 		<span ng-show="feedback" ng-class="getAlertType()">{{feedback}}</span>
 	</div>
 </div>
+
+<h4>Experiment with custom flash card directive</h4>
+<flashcard card-value="{{currentCard.value}}" cardobject="currentCard" on-destroy="destroy()"></flashcard>
 
 <audio id="game-sound" ng-src="{{gameSound}}"></audio>
 
@@ -49,14 +51,10 @@
 <div class="row debug-toggle">
 	<div class="span4">
 		<input type="checkbox" ng-model="debug" /> Debug
-	</div>
-</div>
-
-<div ng-show="debug" class="row">
-	<div class="span4">
-		<h3>DEBUG</h3>
-		<ul>
-			<li ng-repeat="card in game.deck.cards">{{card.value}} - {{card.translated}}</li>
-		</ul>
+		<pre ng-show="debug">
+			<ul>
+				<li ng-repeat="card in game.deck.cards">{{card.value}} - {{card.translated}}</li>
+			</ul>
+		</pre>
 	</div>
 </div>

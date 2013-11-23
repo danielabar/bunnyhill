@@ -76,15 +76,18 @@ Windows users may need to open the the command window as Administrator.
 	```
 
 ## Using LiveReload
-If you want changes to html, css and client side js files automatically reflected in the browser without having to refresh:
+Follow these steps to have changes to html, css and client side js files automatically reflected in the browser without manually clicking refresh.
+
 1. Install the [Chrome LiveReload extension](https://chrome.google.com/webstore/detail/livereload/jnihajbhpnppcggbcgedagnkighmdlei?hl=en)
 1. ```grunt watch```  This will start a livereload server on port 35729, and watch for changes to files specified in the ```watch``` section of Gruntfile.js.
-Alternatively, you can also run ```grunt watch --verbose``` to see the list of files that are being watched
+	* Alternatively, you can also run ```grunt watch --verbose``` to see the list of files that are being watched
+
 1. Launch Chrome and enter [http://localhost:3000](http://localhost:3000)
 1. Click on the livereload icon in the Chrome toolbar (see screenshot below)
-![Chrome livereload toolbar icon](chrome-livereload.png)
-You can now go back to sublime, edit any client side html, css or js. As soon as you save the changes, they will automatically be reloaded in the browser.
 
+![Chrome livereload toolbar icon](chrome-livereload.png)
+
+You can now go back to sublime, edit any client side html, css or js. As soon as you save the changes, they will automatically be reloaded in the browser.
 
 ## <a name="learning-resources"/>Learning Resources
 * [Git Simple Guide](http://rogerdudler.github.io/git-guide/) Just the basics, get started quickly.

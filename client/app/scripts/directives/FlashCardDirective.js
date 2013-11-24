@@ -1,16 +1,8 @@
 'use strict';
 
-/*
-<div class="span2">
-			How do you say...
-		</div>
-		<div class="span2">
-			{{card.value}}
-		</div>
-*/
 
 angular.module('meanRecipieApp')
-  .directive('flashcard', function ($animate) {
+  .directive('flashcard', function ($timeout, $animate) {
     return {
       restrict: 'E',
       scope: {
@@ -34,13 +26,15 @@ angular.module('meanRecipieApp')
 		    });
 
 		    attrs.$observe('flipCard', function(data) {
-        	if(data === 'true') {
-        		scope.message = 'Answer is:';
-        		scope.display = scope.translated;
-        		element.addClass('animated flipInY');
-        	} else {
-        		element.removeClass('animated flipInY');
-        	}
+		    	if(data === 'true') {
+		    		scope.message = 'Answer is:';
+		    		scope.display = scope.translated;
+			    	$animate.addClass(element, 'animated flipInY', function() {
+	            $timeout(function() {
+	              $animate.removeClass(element, 'animated flipInY');
+	            }, 1000);
+	          });
+		    	}
 		    });
 
       }

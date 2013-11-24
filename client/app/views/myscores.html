@@ -1,25 +1,6 @@
-<p> Place holder for charts page </p>
+<p>Scoreboard for deck : {{numbersScoreBoard[0].deckName}} </p>
+<br/>
 
-<div class="row">
-	<div class="span6">				
-  	<div style="float:left; margin:5px;"> Select Game :  </div> 
-  	<div>
-  		<select ng-model="scoreCard" ng-options="d.name for d in decks">
-  				<option value="">All</option>
-  		</select>
-   </div>
-   <br/>
-   	Length: {{scoreBoard.length}} <br/>
-  	Currently selected: {{scoreCard.name}}  
-  	<br/>
-  	<br/>
-  	<!--<p>{{scoreBoard}}</p>-->
-  	<table>
-  		<tr ng-repeat="score in scoreBoard | filter:scoreCard.name">
-  				<td>Your Score is <b> {{score.score}}</b> out of {{score.outOf}}</td>
-  		</tr>
-  	</table>
-
-
-	</div>
+<div id="barchart">
+		<div id="d3bar" angulard3-bar-graph json-Value="{{numbersScoreBoard}}"></div>
 </div>

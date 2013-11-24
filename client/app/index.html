@@ -16,6 +16,7 @@
         <link rel="stylesheet" href="styles/main.css">
         <link rel="stylesheet" href="styles/animate-custom.css">
         <link rel="stylesheet" href="styles/animate.css">
+        <link rel="stylesheet" href="styles/myscores.css">
         <!-- endbuild -->
 </head>
   <body ng-app="meanRecipieApp">
@@ -76,6 +77,7 @@
         <!-- endbuild -->
 
         <!-- build:js({.tmp,app}) scripts/scripts.js -->
+        <script src="http://d3js.org/d3.v3.min.js"></script>
         <script src="scripts/app.js"></script>
         <script src="scripts/lib/angular-local-storage.js"></script>
         <script src="scripts/controllers/MainController.js"></script>
@@ -89,6 +91,8 @@
         <script src="scripts/services/ScoreResource.js"></script>
         <script src="scripts/controllers/MyScoresController.js"></script>
         <script src="scripts/directives/FlashCardDirective.js"></script>
+        <script src="http://labratrevenge.com/d3-tip/javascripts/d3.tip.min.js"></script>
+        <script src="scripts/directives/D3BarChartDirective.js"></script>
         <!-- endbuild -->
 </body>
 </html>

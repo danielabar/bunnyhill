@@ -6,17 +6,35 @@
 }
 
 .my-feedback.ng-hide-add {
-	-webkit-animation: shake 1s;
-  -moz-animation: shake 1s;
-  -ms-animation: shake 1s;
-  animation: shake 1s;
+	-webkit-animation: fadeIn 1s;
+  -moz-animation: fadeIn 1s;
+  -ms-animation: fadeIn 1s;
+  animation: fadeIn 1s;
 }
 
 .my-feedback.ng-hide-remove {
-	-webkit-animation: shake 1s;
-  -moz-animation: shake 1s;
-  -ms-animation: shake 1s;
-  animation: shake 1s;
+	-webkit-animation: fadeIn 1s;
+  -moz-animation: fadeIn 1s;
+  -ms-animation: fadeIn 1s;
+  animation: fadeIn 1s;
+}
+
+.data-entry {
+	position: relative;
+}
+
+.data-entry.ng-hide-add {
+	-webkit-animation: fadeIn 1s;
+  -moz-animation: fadeIn 1s;
+  -ms-animation: fadeIn 1s;
+  animation: fadeIn 1s;
+}
+
+.data-entry.ng-hide-remove {
+	-webkit-animation: fadeIn 1s;
+  -moz-animation: fadeIn 1s;
+  -ms-animation: fadeIn 1s;
+  animation: fadeIn 1s;
 }
 
 .card-flip {
@@ -29,13 +47,6 @@
   -ms-animation: flipInY 1s;
   animation: flipInY 1s;
 }
-
-/*.card-flip.ng-leave {
-	-webkit-animation: flipOutY 1s;
-  -moz-animation: flipOutY 1s;
-  -ms-animation: flipOutY 1s;
-  animation: flipOutY 1s;
-}*/
 
 .my-slide-container {
   position:relative;

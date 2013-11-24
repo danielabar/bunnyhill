@@ -37,10 +37,9 @@ angular.module('meanRecipieApp')
         	if(data === 'true') {
         		scope.message = 'Answer is:';
         		scope.display = scope.translated;
-        		// Animation not working :-(
-        		$animate.addClass(element, 'animated flipInY', function() {
-            	$animate.removeClass(element, 'animated flipInY');
-          	});
+        		element.addClass('animated flipInY');
+        	} else {
+        		element.removeClass('animated flipInY');
         	}
 		    });
 

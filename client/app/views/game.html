@@ -39,7 +39,7 @@
 <div class="row">
 	<div ng-show="feedback" class="span4 my-feedback">
 		<span ng-show="feedback" ng-class="getAlertType()">{{feedback}}</span>
-		<button ng-click="moveAhead()" type="button" class="btn btn-info">Next</button>
+		<button ng-click="moveAhead(); focusInput=true" type="button" class="btn btn-info">Next</button>
 	</div>
 </div>
 

@@ -53,6 +53,7 @@ angular.module('meanRecipieApp')
 				}
 			},
 
+			// FIXME: Don't add same card twice (if UI accidentally allows user to replay the same card)
 			updateScoreBoard: function(guessResult, card) {
 				if (guessResult) {
 					game.scoreBoard.score += 1;

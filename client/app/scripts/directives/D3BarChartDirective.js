@@ -7,14 +7,15 @@ angular.module('meanRecipieApp').directive('angulard3BarGraph', function () {
 			myjson : '@jsonValue'
 		},
 		link : function(scope, elem, attr) {
-		 	attr.$observe('jsonValue', function(data) {		 			
+		 	attr.$observe('jsonValue', function(data) {	
+		 		if(data.length > 2)	 { // check for data is loaded or empty
 		    	scope.myjson = data;
 		    	var data = JSON.parse( scope.myjson );
 
 				  x.domain(data.map(function(d) {
 				  	 return d.playedDate; 
 				  }));
-				  y.domain([0, 11]);
+				  y.domain([0, data[0].outOf]);
 				  svg.append("g")
 				      .attr("class", "x axis")
 				      .attr("transform", "translate(0," + height + ")")
@@ -30,16 +31,21 @@ angular.module('meanRecipieApp').directive('angulard3BarGraph', function () {
 				      .style("text-anchor", "end")
 				      .text("Score");
 
-				  svg.selectAll(".bar")
+				  var myBarChart = svg.selectAll(".bar")
 				      .data(data)
 				    	.enter().append("rect")
 				      .attr("class", "bar")
 				      .attr("x", function(d) { return x(d.playedDate); })
 				      .attr("width", x.rangeBand())
-				      .attr("y", function(d) { return y(d.score); })
-				      .attr("height", function(d) { return height - y(d.score); })
+				      .attr("y", height)
+				      .attr("height", 0)
 				      .on('mouseover', tip.show)
 				      .on('mouseout', tip.hide)
+			  	myBarChart.transition()
+  		  			.delay(function(d, i) { return i * 200; })
+    					.attr("y", function(d) { return y(d.score);})
+    					.attr("height", function(d) { return height - y(d.score); });
+    			}
 	    });
 
 			var margin = {top: 40, right: 20, bottom: 30, left: 40},
@@ -74,6 +80,7 @@ angular.module('meanRecipieApp').directive('angulard3BarGraph', function () {
 			    .append("g")
 			    .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
+		
 			svg.call(tip);
 		}
 	}

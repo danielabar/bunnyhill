@@ -1,3 +1,4 @@
+<!-- Title -->
 <div class="row">
 	<div class="span8">
 		<h2>Playing: {{name}} in {{game.deck.language}}</h2>
@@ -11,20 +12,23 @@
 	</div>
 </div>
 
-<div ng-repeat="card in game.deck.cards | filter:{value:currentCard.value}:true" class="card card-flip">
-	<div class="row">
-		<div class="span2">
-			How do you say...
-		</div>
-		<div class="span2">
-			{{card.value}}
-		</div>
-		<div class="span1">
-			<i ng-show="card.help" popover="{{card.help}}" popover-trigger="mouseenter" class="icon-question-sign"></i> 
-		</div>
+<!-- Help -->
+<div class="row">
+	<div class="span3">
+		<i ng-show="currentCard.help" popover="{{currentCard.help}}" popover-trigger="mouseenter" class="icon-question-sign"></i> 
 	</div>
 </div>
-	
+
+<!-- Card -->
+<flashcard 
+	message="message"
+	display="display"
+	card-value="{{currentCard.value}}" 
+	card-translated="{{currentCard.translated}}" 
+	flip-card="{{flipcard}}">
+</flashcard>
+
+<!-- User Data Entry for Guess -->
 <div class="row">
 	<div class="span2">
 	</div>
@@ -36,21 +40,13 @@
 	</div>
 </div>
 
+<!-- Feedback -->
 <div class="row">
 	<div ng-show="feedback" class="span4 my-feedback">
 		<span ng-show="feedback" ng-class="getAlertType()">{{feedback}}</span>
 		<button ng-click="moveAhead(); focusInput=true" type="button" class="btn btn-info">Next</button>
 	</div>
 </div>
-
-<h4>Experiment with custom flash card directive</h4>
-<flashcard 
-	message="message"
-	display="display"
-	card-value="{{currentCard.value}}" 
-	card-translated="{{currentCard.translated}}" 
-	flip-card="{{flipcard}}">
-</flashcard>
 
 <audio id="game-sound" ng-src="{{gameSound}}"></audio>
 

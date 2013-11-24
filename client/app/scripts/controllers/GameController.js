@@ -48,11 +48,8 @@ angular.module('meanRecipieApp')
 			}
 		}
 
-		$scope.clearFeedback = function() {
-			$scope.feedback = null;
-		}
-
 		$scope.moveAhead = function() {
+			$scope.feedback = null;
 			$scope.flipcard = false;
 			$scope.currentCard = GameService.getNextCard();
 			if ($scope.currentCard) {

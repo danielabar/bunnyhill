@@ -29,11 +29,11 @@
 </flashcard>
 
 <!-- User Data Entry for Guess -->
-<div class="row">
+<div ng-show="!flipcard" class="row">
 	<div class="span2">
 	</div>
 	<div class="span2">
-		<input type="text" placeholder="Enter your translation" ng-model="guess" focus-me="focusInput" ng-change="clearFeedback()" />
+		<input type="text" placeholder="Enter your translation" ng-model="guess" focus-me="focusInput" />
 	</div>
 	<div class="span2">
 		<button ng-click="checkGuess(); focusInput=true" type="button" class="btn btn-primary">Check</button>

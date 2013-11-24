@@ -12,7 +12,11 @@ angular.module('meanRecipieApp')
 			  translated: "@cardTranslated",		
 			  flipcard: "@flipCard"											
 			},
-      template: '<div class="card"><div class="span2">{{message}}</div><div class="span2">{{display}}</div></div>',
+      template: 
+      	'<div class="card">' + 
+      		'<div class="span2">{{message}}</div>' +
+      		'<div class="span2">{{display}}</div>' +
+      	'</div>',
       replace: true,
       link: function (scope, element, attrs) {
 

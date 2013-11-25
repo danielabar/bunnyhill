@@ -7,7 +7,8 @@ angular.module('meanRecipieApp', [
 	'ngSanitize',
 	'ngAnimate',
 	'ui.bootstrap',
-	'LocalStorageModule'
+	'LocalStorageModule',
+	'underscore'
 ])
 	.config(function($routeProvider) {
 		$routeProvider

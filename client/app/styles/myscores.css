@@ -6,11 +6,11 @@
 }
 
 .bar {
-  fill: #6fa8b9;
+  fill: #0F6E8B;
 }
 
 .bar:hover {
-  fill: #0F6E8B ;
+  fill: #468A0F;
 }
 
 .x.axis path {

@@ -10,12 +10,23 @@ angular.module('meanRecipieApp').directive('angulard3BarGraph', function () {
 		 	attr.$observe('jsonValue', function(data) {	
 		 		if(data.length > 2)	 { // check for data is loaded or empty
 		    	scope.myjson = data;
-		    	var data = JSON.parse( scope.myjson );
+		    	var array = JSON.parse( scope.myjson );
+		    	// Converting to percentage..
+		    	var data = 	_.chain(array)
+  					.sortBy(function(scoreObj){ return scoreObj.playedDate; })
+		    		.map(function(scoreObj) { 
+						    var percentageScore = (scoreObj.score / scoreObj.outOf) ;
+						    var retObject = new Object();
+						    retObject.score = percentageScore;
+						    retObject.actualScore = scoreObj.score;
+						    retObject.playedDate = scoreObj.playedDate;
+						    return retObject;
+						}).value();
 
 				  x.domain(data.map(function(d) {
 				  	 return d.playedDate; 
 				  }));
-				  y.domain([0, data[0].outOf]);
+				  y.domain([0, 1]);
 				  svg.append("g")
 				      .attr("class", "x axis")
 				      .attr("transform", "translate(0," + height + ")")
@@ -64,14 +75,15 @@ angular.module('meanRecipieApp').directive('angulard3BarGraph', function () {
 
 			var yAxis = d3.svg.axis()
 			    .scale(y)
-			    .orient("left");
+			    .orient("left")
+			    .tickFormat(d3.format(".0%"));
 
 
 			var tip = d3.tip()
 			  .attr('class', 'd3-tip')
 			  .offset([-10, 0])
 			  .html(function(d) {
-			    return "<strong>Score:</strong> <span style='color:red'>" + d.score + "</span>";
+			    return "<strong>Score:</strong> <span style='color:white'>" + d.actualScore + "</span>";
 			  })
 
 			var svg = d3.select("#barchart").append("svg")

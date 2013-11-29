@@ -2,7 +2,7 @@
 	<div class="span6">
   		<h1>Select a game</h1>
   		<ul>
-      		<li ng-repeat="deck in decks"><a ng-href="#/game/{{deck.name}}" ng-click='startGame(deck)'>{{deck.name}}</a></li>
+      		<li ng-repeat="deck in decks"><a ng-href="#/game/{{deck.name}}" ng-click='startGame(deck)'>{{deck.name}}</a><p>{{deck.language}}</p></li>
   		</ul>
 	</div>
 </div>

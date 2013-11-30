@@ -1,10 +1,15 @@
 'use strict';
 
-angular.module('clientApp')
-  .controller('GameBeginnerCtrl', function ($scope) {
-    $scope.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
+angular.module('meanRecipieApp')
+  .controller('GameBeginnerCtrl', function ($scope, $routeParams, Deck, $log, GameBeginnerService) {
+   	
+   	$scope.name = $routeParams.name;
+
+   	Deck.get({name: $scope.name}, function(res) {
+   		$scope.deck = res;
+   		GameBeginnerService.initGame(res);
+   		$scope.currentCard = GameBeginnerService.getNextCard();
+   		$scope.level = GameBeginnerService.getLevel();
+   	});
+
   });

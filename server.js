@@ -24,6 +24,7 @@ if ('development' == app.get('env')) {
 app.get('/deck', deck.get);
 app.get('/deck/:name', deck.getByName);
 app.get('/score', score.get);
+app.get('/score/:id', score.getById);
 app.post('/score', score.post);
 
 http.createServer(app).listen(app.get('port'), function(){

@@ -3,7 +3,6 @@ var logger = require('../lib/log');
 var Deck = mongoose.model('Deck');
 
 exports.get = function(req, res) {
-	// var id = req.params.id;
 	Deck.find(function(err, data) {
 		if (err) {
 			logger.error(module + ' get all deck err: ' + err);

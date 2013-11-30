@@ -21,7 +21,7 @@ exports.post = function (req, res) {
 			logger.error(module + ' post score err=' + err);
 			res.send(err);
 		} else {
-			logger.info(module + ' save score succeeded');
+			logger.info(module + ' save score succeeded '+ JSON.stringify(score));
 			res.send(score);
 		}
 	});

@@ -69,7 +69,9 @@ angular.module('meanRecipieApp')
 			},
 
 			saveScoreBoard: function() {
-				ScoreResource.save(scoreBoard);
+				ScoreResource.save(scoreBoard, function(res) {
+					console.log('ScoreResource save res: ' + angular.toJson(res));
+				});
 			}
 
     };

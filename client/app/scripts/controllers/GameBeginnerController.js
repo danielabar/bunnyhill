@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('meanRecipieApp')
-  .controller('GameBeginnerCtrl', function ($scope, $routeParams, Deck, GameBeginnerService, AudioService, $location) {
+  .controller('GameBeginnerCtrl', function ($scope, $routeParams, Deck, GameBeginnerService, AudioService, ScoreResource, $location) {
    	
    	$scope.name = $routeParams.name;
 
@@ -47,9 +47,16 @@ angular.module('meanRecipieApp')
 				$scope.incorrect = false;
 				$scope.guess = " ";
 			} else {
-				GameBeginnerService.saveScoreBoard();
-				$location.path('/score/' + $scope.name);
+				finishGame();
 			}
 		};
+
+		var finishGame = function() {
+			ScoreResource.save($scope.scoreBoard, function(res) {
+				console.log('ScoreResource.save res: ' + angular.toJson(res));
+				// TODO: grab mongo _id from res and pass to score page
+				$location.path('/score/' + $scope.name);
+			})
+		}
 
   });

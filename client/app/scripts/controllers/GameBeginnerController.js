@@ -52,10 +52,9 @@ angular.module('meanRecipieApp')
 		};
 
 		var finishGame = function() {
-			ScoreResource.save($scope.scoreBoard, function(res) {
-				console.log('ScoreResource.save res: ' + angular.toJson(res));
-				// TODO: grab mongo _id from res and pass to score page
-				$location.path('/score/' + $scope.name);
+			var finalScoreBoard = GameBeginnerService.getScoreBoard();
+			ScoreResource.save(finalScoreBoard, function(res) {
+				$location.path('/score/' + res._id);
 			})
 		}
 

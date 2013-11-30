@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('meanRecipieApp')
-	.controller('GameCtrl', function($scope, $routeParams, GameService, Deck, $location, AudioService) {
+	.controller('GameCtrl', function($scope, $routeParams, GameService, Deck, $location, AudioService, ScoreResource) {
 
 		$scope.name = $routeParams.name;
 		$scope.game = GameService.getGame();
@@ -20,7 +20,7 @@ angular.module('meanRecipieApp')
 			});
 		} else {
 			$scope.currentCard = GameService.getNextCard();
-		}
+		};
 
 		$scope.checkGuess = function() {
 			$scope.flipcard = true;
@@ -29,7 +29,7 @@ angular.module('meanRecipieApp')
 			$scope.result = result;
 			$scope.scoreBoard = GameService.updateScoreBoard(result, $scope.currentCard);
 			$scope.feedback = GameService.buildFeedback(result, $scope.currentCard);
-		}
+		};
 
 		var playSound = function(result) {
 			if (result) {
@@ -37,7 +37,7 @@ angular.module('meanRecipieApp')
 			} else {
 				AudioService.playIncorrect();
 			}
-		}
+		};
 
 		$scope.getAlertType = function() {
 			if (!$scope.result) {
@@ -45,7 +45,7 @@ angular.module('meanRecipieApp')
 			} else {
 				return "alert alert-success";
 			}
-		}
+		};
 
 		$scope.moveAhead = function() {
 			$scope.feedback = null;
@@ -56,9 +56,15 @@ angular.module('meanRecipieApp')
 				$scope.incorrect = false;
 				$scope.guess = " ";
 			} else {
-				GameService.saveScoreBoard();
-				$location.path('/score/' + $scope.name);
+				finishGame();
 			}
+		};
+
+		var finishGame = function() {
+			var finalScoreBoard = GameService.getScoreBoard();
+			ScoreResource.save(finalScoreBoard, function(res) {
+				$location.path('/score/' + res._id);
+			})
 		}
 
 	});

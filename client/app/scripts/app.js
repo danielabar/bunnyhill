@@ -20,7 +20,7 @@ angular.module('meanRecipieApp', [
 				templateUrl: 'views/game.html',
 				controller: 'GameCtrl'
 			})
-			.when('/score/:name', {
+			.when('/score/:id', {
 				templateUrl: 'views/score.html',
 				controller: 'ScoreCtrl'
 			})

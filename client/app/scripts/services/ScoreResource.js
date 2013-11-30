@@ -2,5 +2,5 @@
 
 angular.module('meanRecipieApp')
 	.factory('ScoreResource', function($resource) {
-		return $resource('/score');
+		return $resource('/score/:id');
 	});

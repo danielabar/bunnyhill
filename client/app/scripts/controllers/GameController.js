@@ -29,7 +29,6 @@ angular.module('meanRecipieApp')
 			$scope.result = result;
 			$scope.scoreBoard = GameService.updateScoreBoard(result, $scope.currentCard);
 			$scope.feedback = GameService.buildFeedback(result, $scope.currentCard);
-			// moveAhead();
 		}
 
 		var playSound = function(result) {

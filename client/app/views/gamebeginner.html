@@ -4,3 +4,39 @@
 		<h2>Playing: {{name}} in {{deck.language}}, Level: {{level}}</h2>
 	</div>
 </div>
+
+<!-- Running Score -->
+<div class="row">
+	<div class="span3">
+		<span>Score: {{scoreBoard.score}} correct out of {{scoreBoard.outOf}}</span>
+	</div>
+</div>
+
+<!-- Card Experiment : try to simply flip translated and value -->
+<flashcard 
+	message="message"
+	display="display"
+	card-value="{{currentCard.translated}}" 
+	card-translated="{{currentCard.value}}" 
+	flip-card="{{flipcard}}">
+</flashcard>
+
+<!-- User Data Entry for Guess -->
+<div ng-show="!flipcard" class="row data-entry">
+	<div class="span2">
+	</div>
+	<div class="span2">
+		<input type="text" placeholder="Enter your translation" ng-model="guess" focus-me="focusInput" />
+	</div>
+	<div class="span2">
+		<button ng-click="checkGuess(); focusInput=true" type="button" class="btn btn-primary">Check</button>
+	</div>
+</div>
+
+<!-- Feedback -->
+<div class="row">
+	<div ng-show="feedback" class="span4 my-feedback">
+		<span ng-show="feedback" ng-class="getAlertType()">{{feedback}}</span>
+		<button ng-click="moveAhead(); focusInput=true" type="button" class="btn btn-info">Next</button>
+	</div>
+</div>

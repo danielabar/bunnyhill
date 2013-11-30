@@ -16,18 +16,10 @@ angular.module('meanRecipieApp')
    	$scope.checkGuess = function() {
 			$scope.flipcard = true;
 			var result = GameBeginnerService.checkGuess($scope.currentCard, $scope.guess);
-			playSound(result);
+			AudioService.playFeedback(result);
 			$scope.result = result;
 			$scope.scoreBoard = GameBeginnerService.updateScoreBoard(result, $scope.currentCard);
 			$scope.feedback = GameBeginnerService.buildFeedback(result, $scope.currentCard);
-		};
-
-		var playSound = function(result) {
-			if (result) {
-				AudioService.playCorrect();
-			} else {
-				AudioService.playIncorrect();
-			}
 		};
 
 		$scope.getAlertType = function() {

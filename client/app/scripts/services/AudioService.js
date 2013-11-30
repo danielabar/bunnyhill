@@ -21,6 +21,14 @@ angular.module('meanRecipieApp')
 
 	  	playIncorrect: function() {
 	  		this.play(incorrectAnswerSound);
+	  	},
+
+	  	playFeedback: function(result) {
+	  		if (result) {
+					this.playCorrect();
+				} else {
+					this.playIncorrect();
+				}
 	  	}
 	  }
 

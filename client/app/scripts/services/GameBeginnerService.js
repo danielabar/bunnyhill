@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('meanRecipieApp')
-  .factory('GameBeginnerService', function (ScoreResource) {
+  .factory('GameBeginnerService', function () {
 
   	var level = "Beginner";
   	var scoreBoard = {};
@@ -66,12 +66,6 @@ angular.module('meanRecipieApp')
 				} else {
 					return 'Incorrect, answer is: ' + card.value;
 				}
-			},
-
-			saveScoreBoard: function() {
-				ScoreResource.save(scoreBoard, function(res) {
-					console.log('ScoreResource save res: ' + angular.toJson(res));
-				});
 			}
 
     };

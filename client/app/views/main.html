@@ -6,11 +6,10 @@
          </a>
          <div class="media-body">
         <h4 class="media-heading">
-            <a ng-href="#/game/{{deck.name}}" ng-click='startGame(deck)'>{{deck.name}}</a></h4>
-      <!-- Nested media object -->
+            <a ng-href="#/game/{{deck.name}}">{{deck.name}}</a></h4>
          <div class="media">
             <p>{{deck.language}}</p>
-            <a ng-href="#/game/{{deck.name}}" class="btn btn-primary" ng-click="startGame(deck)">Play Advanced!</a>
+            <a ng-href="#/game/{{deck.name}}" class="btn btn-primary">Play Advanced!</a>
             <a ng-href="#/gamebeginner/{{deck.name}}" class="btn btn-primary">Play Beginner!</a>
         </div>
     </div>

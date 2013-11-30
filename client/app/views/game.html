@@ -1,7 +1,7 @@
 <!-- Title -->
 <div class="row">
-	<div class="span8">
-		<h2>Playing: {{name}} in {{game.deck.language}}</h2>
+	<div class="span12">
+		<h2>Playing: {{name}} in {{deck.language}}, Level: {{level}}</h2>
 	</div>
 </div>
 
@@ -54,7 +54,7 @@
 		<input type="checkbox" ng-model="debug" /> Debug
 		<pre ng-show="debug">
 			<ul>
-				<li ng-repeat="card in game.deck.cards">{{card.value}} - {{card.translated}}</li>
+				<li ng-repeat="card in deck.cards">{{card.value}} - {{card.translated}}</li>
 			</ul>
 		</pre>
 	</div>

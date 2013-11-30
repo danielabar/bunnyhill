@@ -1,18 +1,22 @@
 'use strict';
 
 angular.module('meanRecipieApp')
-	.factory('GameService', function(localStorageService, ScoreResource) {
+	.factory('GameService', function() {
 
 		var level = "Advanced";
+		var scoreBoard = {};
+  	var cardIndex;
+  	var deck;
 
-		var game = {
-			scoreBoard: {}
-		};
-		var cardIndex = 0;
-
-		var saveScoreboardLocal = function() {
-			localStorageService.add(game.deck.name, angular.toJson(game.scoreBoard));
-		};
+  	var initScoreboard = function(deckToPlay) {
+  		scoreBoard.playedDate = new Date();
+  		scoreBoard.level = level;
+     	scoreBoard.deckName = deck.name
+     	scoreBoard.score = 0;
+     	scoreBoard.incorrectCards = [];
+     	scoreBoard.correctCards = [];
+     	scoreBoard.outOf = deck.cards.length;
+  	};
 
 		return {
 
@@ -20,32 +24,15 @@ angular.module('meanRecipieApp')
     		return level;
     	},
 
-			initScoreBoard: function() {
-				cardIndex = 0;
-				game.scoreBoard.playedDate = new Date();
-				game.scoreBoard.level = level;
-				game.scoreBoard.score = 0;
-				game.scoreBoard.incorrectCards = [];
-				game.scoreBoard.correctCards = [];
-				game.scoreBoard.deckName = "";
-				if (game.deck) {
-					game.scoreBoard.outOf = game.deck.cards.length;
-				}
-			},
-
-			getGame: function() {
-				this.initScoreBoard();	
-				return game;
-			},
-
-			setGame: function(deck) {
-				game.deck = deck;
-				this.initScoreBoard();
-			},
+			initGame: function (deckToPlay) {
+      	deck = deckToPlay;
+       	cardIndex = 0;
+       	initScoreboard(deckToPlay);
+      },
 
 			getNextCard: function() {
-				if (cardIndex < game.deck.cards.length) {
-					var nextCard = game.deck.cards[cardIndex];
+				if (cardIndex < deck.cards.length) {
+					var nextCard = deck.cards[cardIndex];
 					cardIndex = cardIndex + 1;
 					return nextCard;
 				}
@@ -60,25 +47,17 @@ angular.module('meanRecipieApp')
 				}
 			},
 
-			// FIXME: Don't add same card twice (if UI accidentally allows user to replay the same card)
 			updateScoreBoard: function(guessResult, card) {
 				if (guessResult) {
-					game.scoreBoard.score += 1;
-					game.scoreBoard.correctCards.push(card);
+					scoreBoard.score += 1;
+					scoreBoard.correctCards.push(card);
 				} else {
-					game.scoreBoard.incorrectCards.push(card);
+					scoreBoard.incorrectCards.push(card);
 				}
-				game.scoreBoard.deckName = game.deck.name;
-				saveScoreboardLocal();
-				return game.scoreBoard;
 			},
 
 			getScoreBoard: function() {
-				return game.scoreBoard;
-			},
-
-			saveScoreBoard: function() {
-				ScoreResource.save(game.scoreBoard);
+				return scoreBoard;
 			},
 
 			buildFeedback: function(result, card) {

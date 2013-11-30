@@ -4,23 +4,14 @@ angular.module('meanRecipieApp')
 	.controller('GameCtrl', function($scope, $routeParams, GameService, Deck, $location, AudioService, ScoreResource) {
 
 		$scope.name = $routeParams.name;
-		$scope.game = GameService.getGame();
-		$scope.scoreBoard = GameService.getScoreBoard();
-		$scope.flipcard = false;
-
-		// If user refreshed page, GameService state is lost, refetch the deck from api
-		if (!$scope.game.deck) {
-			var deck = Deck.get({
-				name: $scope.name
-			}, function(res) {
-				GameService.setGame(deck);
-				$scope.game = GameService.getGame();
-				$scope.scoreBoard = GameService.getScoreBoard();
-				$scope.currentCard = GameService.getNextCard();
-			});
-		} else {
-			$scope.currentCard = GameService.getNextCard();
-		};
+		
+			Deck.get({name: $scope.name}, function(res) {
+	   		$scope.deck = res;
+	   		GameService.initGame(res);
+	   		$scope.currentCard = GameService.getNextCard();
+	   		$scope.level = GameService.getLevel();
+	   		$scope.scoreBoard = GameService.getScoreBoard();
+	   	});
 
 		$scope.checkGuess = function() {
 			$scope.flipcard = true;

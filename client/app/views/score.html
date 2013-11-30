@@ -1,4 +1,5 @@
-<h3>Your Score for: {{name}}</h3>
+<h3>Your Score for: {{scoreBoard.deckName}}</h3>
+<h4>Level: {{scoreBoard.level}}, played on: {{scoreBoard.playedDate | date:'medium'}}</h4>
 
 <!-- Summary -->
 <div class="row">
@@ -34,7 +35,7 @@
 <!-- Actions -->
 <div class="row">
 	<div class="span6">
-		<a ng-href="#/game/{{name}}">Play Again</a>
+		<a ng-href="#/game/{{scoreBoard.deckName}}">Play Again</a>
 	</div>
 </div>
 <div class="row">

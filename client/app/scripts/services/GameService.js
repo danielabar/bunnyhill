@@ -3,6 +3,8 @@
 angular.module('meanRecipieApp')
 	.factory('GameService', function(localStorageService, ScoreResource) {
 
+		var level = "Advanced";
+
 		var game = {
 			scoreBoard: {}
 		};
@@ -14,9 +16,14 @@ angular.module('meanRecipieApp')
 
 		return {
 
+			getLevel: function() {
+    		return level;
+    	},
+
 			initScoreBoard: function() {
 				cardIndex = 0;
 				game.scoreBoard.playedDate = new Date();
+				game.scoreBoard.level = level;
 				game.scoreBoard.score = 0;
 				game.scoreBoard.incorrectCards = [];
 				game.scoreBoard.correctCards = [];

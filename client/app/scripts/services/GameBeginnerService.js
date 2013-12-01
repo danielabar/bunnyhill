@@ -17,13 +17,13 @@ angular.module('meanRecipieApp')
      	scoreBoard.correctCards = [];
      	scoreBoard.outOf = deck.cards.length;
   	};
-    
+
     return {
 
     	getLevel: function() {
     		return level;
     	},
-      
+
       initGame: function (deckToPlay) {
       	deck = deckToPlay;
        	cardIndex = 0;
@@ -54,6 +54,7 @@ angular.module('meanRecipieApp')
 				} else {
 					scoreBoard.incorrectCards.push(card);
 				}
+				return scoreBoard;
 			},
 
 			getScoreBoard: function() {

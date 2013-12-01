@@ -54,6 +54,7 @@ angular.module('meanRecipieApp')
 				} else {
 					scoreBoard.incorrectCards.push(card);
 				}
+				return scoreBoard;
 			},
 
 			getScoreBoard: function() {

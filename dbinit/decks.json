@@ -1,10 +1,10 @@
 [
 	{
-		"name": "Numbers", 
-		"language": "Italian", 
+		"name": "Numbers",
+		"language": "Italian",
 		"cards": [
-			{"value": "zero", "translated": "zero"}, 
-			{"value": "one", "translated": "uno"},
+			{"value": "zero", "translated": "zero", "audio": "sounds/italian/numbers/zero.mp3"},
+			{"value": "one", "translated": "uno", "audio": "sounds/italian/numbers/uno.mp3"},
 			{"value": "two", "translated": "due"},
 			{"value": "three", "translated": "tre"},
 			{"value": "four", "translated": "quattro"},
@@ -17,10 +17,10 @@
 		]
 	},
 	{
-		"name": "Days of the Week", 
-		"language": "Italian", 
+		"name": "Days of the Week",
+		"language": "Italian",
 		"cards": [
-			{"value": "Monday", "translated": "lunedi"}, 
+			{"value": "Monday", "translated": "lunedi"},
 			{"value": "Tuesday", "translated": "martedi"},
 			{"value": "Wednesday", "translated": "mercoledi"},
 			{"value": "Thursday", "translated": "giovedi"},
@@ -33,10 +33,10 @@
 		]
 	},
 	{
-		"name": "Nouns Pluralization", 
-		"language": "Italian", 
+		"name": "Nouns Pluralization",
+		"language": "Italian",
 		"cards": [
-			{"value": "boy", "translated": "ragazzo"}, 
+			{"value": "boy", "translated": "ragazzo"},
 			{"value": "boys", "translated": "ragazzi", "help": "Masculine nouns ending in o are pluralized by ending with an i"},
 			{"value": "book", "translated": "libro"},
 			{"value": "books", "translated": "libri", "help": "Masculine nouns ending in o are pluralized by ending with an i"},
@@ -55,10 +55,10 @@
 		]
 	},
 	{
-		"name": "Definite Articles", 
-		"language": "Italian", 
+		"name": "Definite Articles",
+		"language": "Italian",
 		"cards": [
-			{"value": "a book", "translated": "un libro", "help": "un is for masculine nouns not starting with s+consonant, ps, pn, or gn"}, 
+			{"value": "a book", "translated": "un libro", "help": "un is for masculine nouns not starting with s+consonant, ps, pn, or gn"},
 			{"value": "a tree", "translated": "un albero", "help": "un is for masculine nouns not starting with s+consonant, ps, pn, or gn"},
 			{"value": "a girl", "translated": "una ragazza", "help": "una is used for feminine nouns starting with a consonant"},
 			{"value": "an aunt", "translated": "una zia", "help": "una is used for feminine nouns starting with a consonant"},

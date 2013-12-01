@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('meanRecipieApp')
-  .directive('audiocard', function () {
+  .directive('audiocard', function ($document) {
     return {
       restrict: 'E',
       scope: {
@@ -10,7 +10,6 @@ angular.module('meanRecipieApp')
       },
       template:
       	'<div class="card"> ' +
-      		'<audio></audio>' +
       		'<div class="span2">Display Test</div>' +
       		'<img src="img/audio.gif" class="img-circle" height="42" width="42">' +
       	'</div>',
@@ -18,8 +17,13 @@ angular.module('meanRecipieApp')
 
       link: function postLink(scope, element, attrs) {
 
+      	var audioElement = $document[0].createElement('audio');
+
       	scope.$watch('carddata', function(data) {
-      		console.log('AudioCardDirective carddata: ' + angular.toJson(data));
+      		if(data && data.audio) {
+      			audioElement.src = data.audio;
+      			audioElement.play();
+      		}
       	});
 
       }

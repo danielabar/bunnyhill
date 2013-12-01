@@ -27,6 +27,7 @@ angular.module('meanRecipieApp')
 
   	var levelToCheckMap = {
   		beginner: beginnerCheck,
+  		intermediate: advancedCheck,
   		advanced: advancedCheck
   	};
 

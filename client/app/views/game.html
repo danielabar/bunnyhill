@@ -31,7 +31,10 @@
 	</flashcard>
 </div>
 <div ng-if="level === 'intermediate'">
-	<audiocard message="message" carddata="currentCard">
+	<audiocard
+		message="message"
+		carddata="currentCard"
+		behaviour="flashCardBehaviour">
 	</audiocard>
 </div>
 <div ng-if="level === 'advanced'">

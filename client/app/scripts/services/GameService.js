@@ -18,6 +18,19 @@ angular.module('meanRecipieApp')
      	scoreBoard.outOf = deck.cards.length;
   	};
 
+  	var beginnerCheck = function(card, guess) {
+  		return (card.value === guess);
+  	};
+
+  	var advancedCheck = function(card, guess) {
+  		return (card.translated === guess);
+  	};
+
+  	var levelToCheckMap = {
+  		beginner: beginnerCheck,
+  		advanced: advancedCheck
+  	};
+
 		return {
 
 			getLevel: function() {
@@ -39,8 +52,10 @@ angular.module('meanRecipieApp')
 				return null;
 			},
 
-			checkGuess: function(card, guess) {
-				if (card.translated === guess) {
+			checkGuess: function(card, guess, level) {
+				var checkFunction = levelToCheckMap[level];
+				var checkResult = checkFunction.apply(null, [card, guess]);
+				if (checkResult) {
 					return true;
 				} else {
 					return false;

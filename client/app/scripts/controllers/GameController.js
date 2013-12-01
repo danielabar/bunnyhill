@@ -3,18 +3,19 @@
 angular.module('meanRecipieApp')
 	.controller('GameCtrl', function($scope, $routeParams, GameService, Deck, $location, AudioService, ScoreResource) {
 
+		console.log('GameCtrl routeParams: ' + angular.toJson($routeParams));
+	  $scope.level = $routeParams.level;
 		$scope.name = $routeParams.name;
 
-			Deck.get({name: $scope.name}, function(res) {
-	   		$scope.deck = res;
-	   		GameService.initGame(res);
-	   		$scope.currentCard = GameService.getNextCard();
-	   		$scope.level = GameService.getLevel();
-	   		$scope.scoreBoard = GameService.getScoreBoard();
-	   	});
+		Deck.get({name: $scope.name}, function(res) {
+   		$scope.deck = res;
+   		GameService.initGame(res);
+   		$scope.currentCard = GameService.getNextCard();
+   		$scope.scoreBoard = GameService.getScoreBoard();
+   	});
 
 		$scope.checkGuess = function() {
-			var result = GameService.checkGuess($scope.currentCard, $scope.guess);
+			var result = GameService.checkGuess($scope.currentCard, $scope.guess, $scope.level);
 			AudioService.playFeedback(result);
 			$scope.result = result;
 			$scope.flashCardBehaviour = {flipCard: true, isAnswerCorrect: result};

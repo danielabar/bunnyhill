@@ -5,67 +5,67 @@
 		"cards": [
 			{"value": "zero", "translated": "zero", "audio": "sounds/italian/numbers/zero.mp3"},
 			{"value": "one", "translated": "uno", "audio": "sounds/italian/numbers/uno.mp3"},
-			{"value": "two", "translated": "due"},
-			{"value": "three", "translated": "tre"},
-			{"value": "four", "translated": "quattro"},
-			{"value": "five", "translated": "cinque"},
-			{"value": "six", "translated": "sei"},
-			{"value": "seven", "translated": "sette"},
-			{"value": "eight", "translated": "otto"},
-			{"value": "nine", "translated": "nove"},
-			{"value": "ten", "translated": "dieci"}
+			{"value": "two", "translated": "due", "audio": "sounds/italian/numbers/due.mp3"},
+			{"value": "three", "translated": "tre", "audio": "sounds/italian/numbers/tre.mp3"},
+			{"value": "four", "translated": "quattro", "audio": "sounds/italian/numbers/quattro.mp3"},
+			{"value": "five", "translated": "cinque", "audio": "sounds/italian/numbers/cinque.mp3"},
+			{"value": "six", "translated": "sei", "audio": "sounds/italian/numbers/sei.mp3"},
+			{"value": "seven", "translated": "sette", "audio": "sounds/italian/numbers/sette.mp3"},
+			{"value": "eight", "translated": "otto", "audio": "sounds/italian/numbers/otto.mp3"},
+			{"value": "nine", "translated": "nove", "audio": "sounds/italian/numbers/nove.mp3"},
+			{"value": "ten", "translated": "dieci", "audio": "sounds/italian/numbers/dieci.mp3"}
 		]
 	},
 	{
 		"name": "Days of the Week",
 		"language": "Italian",
 		"cards": [
-			{"value": "Monday", "translated": "lunedi"},
-			{"value": "Tuesday", "translated": "martedi"},
-			{"value": "Wednesday", "translated": "mercoledi"},
-			{"value": "Thursday", "translated": "giovedi"},
-			{"value": "Friday", "translated": "venerdi"},
-			{"value": "Saturday", "translated": "sabato"},
-			{"value": "Sunday", "translated": "domenica"},
-			{"value": "yesterday", "translated": "ieri"},
-			{"value": "today", "translated": "oggi"},
-			{"value": "tomorrow", "translated": "domani"}
+			{"value": "Monday", "translated": "lunedi", "audio": "sounds/italian/days-of-the-week/lunedi.mp3"},
+			{"value": "Tuesday", "translated": "martedi", "audio": "sounds/italian/days-of-the-week/martedi.mp3"},
+			{"value": "Wednesday", "translated": "mercoledi", "audio": "sounds/italian/days-of-the-week/mercoledi.mp3"},
+			{"value": "Thursday", "translated": "giovedi", "audio": "sounds/italian/days-of-the-week/giovedi.mp3"},
+			{"value": "Friday", "translated": "venerdi", "audio": "sounds/italian/days-of-the-week/venerdi.mp3"},
+			{"value": "Saturday", "translated": "sabato", "audio": "sounds/italian/days-of-the-week/sabato.mp3"},
+			{"value": "Sunday", "translated": "domenica", "audio": "sounds/italian/days-of-the-week/domenica.mp3"},
+			{"value": "yesterday", "translated": "ieri", "audio": "sounds/italian/days-of-the-week/ieri.mp3"},
+			{"value": "today", "translated": "oggi", "audio": "sounds/italian/days-of-the-week/oggi.mp3"},
+			{"value": "tomorrow", "translated": "domani", "audio": "sounds/italian/days-of-the-week/domani.mp3"}
 		]
 	},
 	{
 		"name": "Nouns Pluralization",
 		"language": "Italian",
 		"cards": [
-			{"value": "boy", "translated": "ragazzo"},
-			{"value": "boys", "translated": "ragazzi", "help": "Masculine nouns ending in o are pluralized by ending with an i"},
-			{"value": "book", "translated": "libro"},
-			{"value": "books", "translated": "libri", "help": "Masculine nouns ending in o are pluralized by ending with an i"},
-			{"value": "doctor", "translated": "dottore"},
-			{"value": "doctors", "translated": "dottori", "help": "Masculine nouns ending in e are pluralized by ending with an i"},
-			{"value": "teacher", "translated": "insegnante"},
-			{"value": "teachers", "translated": "insegnanti", "help": "Masculine nouns ending in e are pluralized by ending with an i"},
-			{"value": "girl", "translated": "ragazza"},
-			{"value": "girls", "translated": "ragazze", "help": "Feminine nounds ending in a are pluralized by ending with an e"},
-			{"value": "friend", "translated": "amica"},
-			{"value": "friends", "translated": "amiche", "help": "Feminine nounds ending in a are pluralized by ending with an e"},
-			{"value": "mother", "translated": "madre"},
-			{"value": "mothers", "translated": "madri", "help": "Feminine nounds ending in e are pluralized by ending with an i"},
-			{"value": "night", "translated": "notte"},
-			{"value": "nights", "translated": "notti", "help": "Feminine nounds ending in e are pluralized by ending with an i"}
+			{"value": "boy", "translated": "ragazzo", "audio": "sounds/italian/nouns-pluralization/ragazzo.mp3"},
+			{"value": "boys", "translated": "ragazzi", "help": "Masculine nouns ending in o are pluralized by ending with an i", "audio": "sounds/italian/nouns-pluralization/ragazzi.mp3"},
+			{"value": "book", "translated": "libro", "audio": "sounds/italian/nouns-pluralization/libro.mp3"},
+			{"value": "books", "translated": "libri", "help": "Masculine nouns ending in o are pluralized by ending with an i", "audio": "sounds/italian/nouns-pluralization/libri.mp3"},
+			{"value": "doctor", "translated": "dottore", "audio": "sounds/italian/nouns-pluralization/dottore.mp3"},
+			{"value": "doctors", "translated": "dottori", "help": "Masculine nouns ending in e are pluralized by ending with an i", "audio": "sounds/italian/nouns-pluralization/dottori.mp3"},
+			{"value": "teacher", "translated": "insegnante", "audio": "sounds/italian/nouns-pluralization/insegnante.mp3"},
+			{"value": "teachers", "translated": "insegnanti", "help": "Masculine nouns ending in e are pluralized by ending with an i", "audio": "sounds/italian/nouns-pluralization/insegnanti.mp3"},
+			{"value": "girl", "translated": "ragazza", "audio": "sounds/italian/nouns-pluralization/ragazza.mp3"},
+			{"value": "girls", "translated": "ragazze", "help": "Feminine nounds ending in a are pluralized by ending with an e", "audio": "sounds/italian/nouns-pluralization/ragazzi.mp3"},
+			{"value": "friend", "translated": "amica", "audio": "sounds/italian/nouns-pluralization/amica.mp3"},
+			{"value": "friends", "translated": "amiche", "help": "Feminine nounds ending in a are pluralized by ending with an e", "audio": "sounds/italian/nouns-pluralization/amiche.mp3"},
+			{"value": "mother", "translated": "madre", "audio": "sounds/italian/nouns-pluralization/madre.mp3"},
+			{"value": "mothers", "translated": "madri", "help": "Feminine nounds ending in e are pluralized by ending with an i", "audio": "sounds/italian/nouns-pluralization/madri.mp3"},
+			{"value": "night", "translated": "notte", "audio": "sounds/italian/nouns-pluralization/notte.mp3"},
+			{"value": "nights", "translated": "notti", "help": "Feminine nounds ending in e are pluralized by ending with an i", "audio": "sounds/italian/nouns-pluralization/notti.mp3"}
 		]
 	},
 	{
 		"name": "Definite Articles",
 		"language": "Italian",
 		"cards": [
-			{"value": "a book", "translated": "un libro", "help": "un is for masculine nouns not starting with s+consonant, ps, pn, or gn"},
-			{"value": "a tree", "translated": "un albero", "help": "un is for masculine nouns not starting with s+consonant, ps, pn, or gn"},
-			{"value": "a girl", "translated": "una ragazza", "help": "una is used for feminine nouns starting with a consonant"},
-			{"value": "an aunt", "translated": "una zia", "help": "una is used for feminine nouns starting with a consonant"},
-			{"value": "a tire", "translated": "uno pneumatico", "help": "uno is for masculine nouns starting with s+consonant, ps, pn, or gn"},
-			{"value": "a gnome", "translated": "uno gnome", "help": "uno is for masculine nouns starting with s+consonant, ps, pn, or gn"},
-			{"value": "a female friend", "translated": "un'amica", "help": "un' is used for feminine nouns starting with a vowel"},
-			{"value": "an hour", "translated": "un'ora", "help": "un' is used for feminine nouns starting with a vowel"}
+			{"value": "a book", "translated": "un libro", "help": "un is for masculine nouns not starting with s+consonant, ps, pn, or gn", "audio": "sounds/italian/definite-articles/un-libro.mp3"},
+			{"value": "a tree", "translated": "un albero", "help": "un is for masculine nouns not starting with s+consonant, ps, pn, or gn", "audio": "sounds/italian/definite-articles/un-albero.mp3"},
+			{"value": "a girl", "translated": "una ragazza", "help": "una is used for feminine nouns starting with a consonant", "audio": "sounds/italian/definite-articles/una-ragazza.mp3"},
+			{"value": "an aunt", "translated": "una zia", "help": "una is used for feminine nouns starting with a consonant", "audio": "sounds/italian/definite-articles/una-zia.mp3"},
+			{"value": "a tire", "translated": "uno pneumatico", "help": "uno is for masculine nouns starting with s+consonant, ps, pn, or gn", "audio": "sounds/italian/definite-articles/uno-pneumatico.mp3"},
+			{"value": "a gnome", "translated": "uno gnome", "help": "uno is for masculine nouns starting with s+consonant, ps, pn, or gn", "audio": "sounds/italian/definite-articles/uno-gnome.mp3"},
+			{"value": "a female friend", "translated": "un'amica", "help": "un' is used for feminine nouns starting with a vowel", "audio": "sounds/italian/definite-articles/un-amica.mp3"},
+			{"value": "an hour", "translated": "un'ora", "help": "un' is used for feminine nouns starting with a vowel", "audio": "sounds/italian/definite-articles/un-ora.mp3"}
 		]
 	}
 ]

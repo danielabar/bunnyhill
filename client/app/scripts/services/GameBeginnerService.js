@@ -59,15 +59,7 @@ angular.module('meanRecipieApp')
 
 			getScoreBoard: function() {
 				return scoreBoard;
-			},
-
-			buildFeedback: function(result, card) {
-				if (result) {
-					return 'Correct';
-				} else {
-					return 'Incorrect, answer is: ' + card.value;
-				}
 			}
-
     };
+
   });

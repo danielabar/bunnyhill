@@ -63,7 +63,7 @@ angular.module('meanRecipieApp')
 			    		$animate.addClass(element, 'animated rotateOutUpLeft', function() {
 		            $timeout(function() {
 		              $animate.removeClass(element, 'animated rotateOutUpLeft');
-		            }, 1000);
+		            }, 500);
 		          });
 		    		}
 		    	}

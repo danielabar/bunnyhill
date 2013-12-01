@@ -12,7 +12,7 @@ angular.module('meanRecipieApp')
       template:
       	'<div class="card"> ' +
       		'<div class="span2">{{message}}</div>' +
-      		'<img src="img/audio.gif" class="img-circle" height="42" width="42">' +
+      		'<img ng-click="replayAudio()" src="img/audio.gif" class="img-circle" height="42" width="42">' +
       		'<div id="feedbackMarkerSuccess" class="circle circle-success">&#x2713;</div>' +
       		'<div id="feedbackMarkerError" class="circle circle-error">&#x2718;</div>' +
       	'</div>',
@@ -34,6 +34,10 @@ angular.module('meanRecipieApp')
       	};
 
       	var audioElement = $document[0].createElement('audio');
+
+      	scope.replayAudio = function() {
+      		audioElement.play();
+      	};
 
       	hideMarker();
 

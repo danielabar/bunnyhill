@@ -48,6 +48,7 @@ angular.module('meanRecipieApp')
 		    });
 
 		    scope.$watch('behaviour', function(data) {
+		    	console.log('behaviour: ' + angular.toJson(data));
 		    	if(data && data.flipCard) {
 		    		scope.message = 'Answer is:';
 		    		scope.display = scope.translated;
@@ -59,6 +60,13 @@ angular.module('meanRecipieApp')
 	          });
 		    	} else {
 		    		hideMarker();
+		    		if (data && data.flipCard === false) {
+			    		$animate.addClass(element, 'animated rotateOutUpLeft', function() {
+		            $timeout(function() {
+		              $animate.removeClass(element, 'animated rotateOutUpLeft');
+		            }, 1000);
+		          });
+		    		}
 		    	}
 		    });
 

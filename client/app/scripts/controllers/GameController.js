@@ -3,13 +3,12 @@
 angular.module('meanRecipieApp')
 	.controller('GameCtrl', function($scope, $routeParams, GameService, Deck, $location, AudioService, ScoreResource) {
 
-		console.log('GameCtrl routeParams: ' + angular.toJson($routeParams));
 	  $scope.level = $routeParams.level;
 		$scope.name = $routeParams.name;
 
-		Deck.get({name: $scope.name}, function(res) {
-   		$scope.deck = res;
-   		GameService.initGame(res);
+		Deck.get({name: $scope.name}, function(deckDetails) {
+   		$scope.deck = deckDetails;
+   		GameService.initGame(deckDetails, $scope.level);
    		$scope.currentCard = GameService.getNextCard();
    		$scope.scoreBoard = GameService.getScoreBoard();
    	});

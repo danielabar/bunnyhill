@@ -3,12 +3,11 @@
 angular.module('meanRecipieApp')
 	.factory('GameService', function() {
 
-		var level = "Advanced";
 		var scoreBoard = {};
   	var cardIndex;
   	var deck;
 
-  	var initScoreboard = function(deckToPlay) {
+  	var initScoreboard = function(deckToPlay, level) {
   		scoreBoard.playedDate = new Date();
   		scoreBoard.level = level;
      	scoreBoard.deckName = deck.name
@@ -33,14 +32,10 @@ angular.module('meanRecipieApp')
 
 		return {
 
-			getLevel: function() {
-    		return level;
-    	},
-
-			initGame: function (deckToPlay) {
+			initGame: function (deckToPlay, level) {
       	deck = deckToPlay;
        	cardIndex = 0;
-       	initScoreboard(deckToPlay);
+       	initScoreboard(deckToPlay, level);
       },
 
 			getNextCard: function() {

@@ -2,13 +2,17 @@
 
 angular.module('meanRecipieApp').directive('angulard3BarGraph', function () {
 	return {
-		restrict: 'A',	
+		restrict: 'E',	
 		scope: {
-			myjson : '@jsonValue'
+			myjson : '@jsonValue',
+			barchartId: '@barchartId'
 		},
+		template : '<div id="d3bar" json-Value="{{myjson}}"></div>',
+		replace:true,
 		link : function(scope, elem, attr) {
+
 		 	attr.$observe('jsonValue', function(data) {	
-		 		if(data.length > 2)	 { // check for data is loaded or empty
+		 		if(data.length > 10)	 { // check for data is loaded or empty
 		    	scope.myjson = data;
 		    	var array = JSON.parse( scope.myjson );
 		    	// Converting to percentage..
@@ -27,6 +31,15 @@ angular.module('meanRecipieApp').directive('angulard3BarGraph', function () {
 				  	 return d.playedDate; 
 				  }));
 				  y.domain([0, 1]);
+				  var barchartId = "barchart_"+scope.barchartId;
+				  var svg = d3.select("#"+barchartId).append("svg")
+			    	.attr("width", width + margin.left + margin.right)
+				    .attr("height", height + margin.top + margin.bottom)
+				    .append("g")
+				    .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+					svg.call(tip);
+
 				  svg.append("g")
 				      .attr("class", "x axis")
 				      .attr("transform", "translate(0," + height + ")")
@@ -51,11 +64,12 @@ angular.module('meanRecipieApp').directive('angulard3BarGraph', function () {
 				      .attr("y", height)
 				      .attr("height", 0)
 				      .on('mouseover', tip.show)
-				      .on('mouseout', tip.hide)
-			  	myBarChart.transition()
+				      .on('mouseout', tip.hide);
+
+			  		myBarChart.transition()
   		  			.delay(function(d, i) { return i * 200; })
     					.attr("y", function(d) { return y(d.score);})
-    					.attr("height", function(d) { return height - y(d.score); });
+    					.attr("height", function(d) { return height - y(d.score); });    					
     			}
 	    });
 
@@ -78,22 +92,12 @@ angular.module('meanRecipieApp').directive('angulard3BarGraph', function () {
 			    .orient("left")
 			    .tickFormat(d3.format(".0%"));
 
-
 			var tip = d3.tip()
 			  .attr('class', 'd3-tip')
 			  .offset([-10, 0])
 			  .html(function(d) {
 			    return "<strong>Score:</strong> <span style='color:white'>" + d.actualScore + "</span>";
 			  })
-
-			var svg = d3.select("#barchart").append("svg")
-			    .attr("width", width + margin.left + margin.right)
-			    .attr("height", height + margin.top + margin.bottom)
-			    .append("g")
-			    .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
-
-		
-			svg.call(tip);
 		}
 	}
 })

@@ -1,4 +1,5 @@
 var express = require('express');
+var lessMiddleware = require('less-middleware');
 var logger = require('./server/lib/log');
 var db = require('./server/lib/db');
 var deck = require('./server/routes/deck');
@@ -15,6 +16,14 @@ app.use(express.bodyParser());
 app.use(express.methodOverride());
 app.use(express.cookieParser('your secret here'));
 app.use(express.session());
+
+app.use(lessMiddleware({
+    dest: __dirname + '/client/app/styles',
+    src: __dirname + '/client/app/less',
+    prefix: '/styles',
+    compress: true
+}));
+
 app.use(express.static(path.join(__dirname, '/client/app')));
 
 if ('development' == app.get('env')) {

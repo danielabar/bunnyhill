@@ -6,7 +6,8 @@
     "express": "3.4.2",
     "jade": "*",
     "winston": "~0.7.2",
-    "mongoose": "~3.8.0"
+    "mongoose": "~3.8.0",
+    "less-middleware": "~0.1.14"
   },
   "devDependencies": {
     "grunt": "~0.4.1",

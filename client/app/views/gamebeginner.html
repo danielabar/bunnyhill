@@ -34,10 +34,13 @@
 	</div>
 </div>
 
-<!-- Feedback -->
-<div class="row">
-	<div ng-show="feedback" class="span4 my-feedback">
-		<span ng-show="feedback" ng-class="getAlertType()">{{feedback}}</span>
+<!-- Move to next card -->
+<div ng-show="flashCardBehaviour.flipCard" class="row my-feedback">
+	<div class="span2">
+	</div>
+	<div class="span2">
+	</div>
+	<div class="span2">
 		<button ng-click="moveAhead(); focusInput=true" type="button" class="btn btn-info">Next</button>
 	</div>
 </div>

@@ -21,21 +21,25 @@
 </div>
 
 <!-- Card -->
-<div ng-if="level === 'advanced'">
-	<flashcard
-		message="message"
-		display="display"
-		card-value="{{currentCard.value}}"
-		card-translated="{{currentCard.translated}}"
-		behaviour="flashCardBehaviour">
-	</flashcard>
-</div>
 <div ng-if="level === 'beginner'">
 	<flashcard
 		message="message"
 		display="display"
 		card-value="{{currentCard.translated}}"
 		card-translated="{{currentCard.value}}"
+		behaviour="flashCardBehaviour">
+	</flashcard>
+</div>
+<div ng-if="level === 'intermediate'">
+	<audiocard message="message" carddata="currentCard">
+	</audiocard>
+</div>
+<div ng-if="level === 'advanced'">
+	<flashcard
+		message="message"
+		display="display"
+		card-value="{{currentCard.value}}"
+		card-translated="{{currentCard.translated}}"
 		behaviour="flashCardBehaviour">
 	</flashcard>
 </div>

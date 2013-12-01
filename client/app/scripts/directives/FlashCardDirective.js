@@ -8,17 +8,21 @@ angular.module('meanRecipieApp')
       scope: {
       	message: "=message",
       	display: "=display",
-			  value: "@cardValue",								
-			  translated: "@cardTranslated",		
-			  flipcard: "@flipCard"											
+			  value: "@cardValue",
+			  translated: "@cardTranslated",
+			  behaviour: "=behaviour"
 			},
-      template: 
-      	'<div class="card">' + 
+      template:
+      	'<div class="card">' +
       		'<div class="span2">{{message}}</div>' +
       		'<div class="span2">{{display}}</div>' +
       	'</div>',
       replace: true,
       link: function (scope, element, attrs) {
+
+      	var appendMarker = function(element, result) {
+      		// TODO Show circle with X or check
+      	};
 
         attrs.$observe('cardValue', function(data) {
         	scope.message = 'How do you say...';
@@ -29,10 +33,11 @@ angular.module('meanRecipieApp')
 		    	scope.translated = data;
 		    });
 
-		    attrs.$observe('flipCard', function(data) {
-		    	if(data === 'true') {
+		    scope.$watch('behaviour', function(data) {
+		    	if(data && data.flipCard) {
 		    		scope.message = 'Answer is:';
 		    		scope.display = scope.translated;
+		    		appendMarker(element, data.isAnswerCorrect);
 			    	$animate.addClass(element, 'animated flipInY', function() {
 	            $timeout(function() {
 	              $animate.removeClass(element, 'animated flipInY');

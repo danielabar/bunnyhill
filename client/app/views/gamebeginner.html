@@ -14,16 +14,16 @@
 </div>
 
 <!-- Card -->
-<flashcard 
+<flashcard
 	message="message"
 	display="display"
-	card-value="{{currentCard.translated}}" 
-	card-translated="{{currentCard.value}}" 
-	flip-card="{{flipcard}}">
+	card-value="{{currentCard.translated}}"
+	card-translated="{{currentCard.value}}"
+	behaviour="flashCardBehaviour">
 </flashcard>
 
 <!-- User Data Entry for Guess -->
-<div ng-show="!flipcard" class="row data-entry">
+<div ng-hide="flashCardBehaviour.flipCard" class="row data-entry">
 	<div class="span2">
 	</div>
 	<div class="span2">

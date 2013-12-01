@@ -2,7 +2,7 @@
 
 angular.module('meanRecipieApp')
   .controller('GameBeginnerCtrl', function ($scope, $routeParams, Deck, GameBeginnerService, AudioService, ScoreResource, $location) {
-   	
+
    	$scope.name = $routeParams.name;
 
    	Deck.get({name: $scope.name}, function(res) {
@@ -14,10 +14,10 @@ angular.module('meanRecipieApp')
    	});
 
    	$scope.checkGuess = function() {
-			$scope.flipcard = true;
 			var result = GameBeginnerService.checkGuess($scope.currentCard, $scope.guess);
 			AudioService.playFeedback(result);
 			$scope.result = result;
+			$scope.flashCardBehaviour = {"flipCard": true, "isAnswerCorrect": result};
 			$scope.scoreBoard = GameBeginnerService.updateScoreBoard(result, $scope.currentCard);
 			$scope.feedback = GameBeginnerService.buildFeedback(result, $scope.currentCard);
 		};
@@ -32,11 +32,9 @@ angular.module('meanRecipieApp')
 
 		$scope.moveAhead = function() {
 			$scope.feedback = null;
-			$scope.flipcard = false;
+			$scope.flashCardBehaviour = {flipCard: false, isAnswerCorrect: undefined};
 			$scope.currentCard = GameBeginnerService.getNextCard();
 			if ($scope.currentCard) {
-				$scope.correct = false;
-				$scope.incorrect = false;
 				$scope.guess = " ";
 			} else {
 				finishGame();

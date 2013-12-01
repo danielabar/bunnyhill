@@ -16,21 +16,21 @@
 <!-- Help -->
 <div class="row">
 	<div class="span3">
-		<i ng-show="currentCard.help" popover="{{currentCard.help}}" popover-trigger="mouseenter" class="icon-question-sign"></i> 
+		<i ng-show="currentCard.help" popover="{{currentCard.help}}" popover-trigger="mouseenter" class="icon-question-sign"></i>
 	</div>
 </div>
 
 <!-- Card -->
-<flashcard 
+<flashcard
 	message="message"
 	display="display"
-	card-value="{{currentCard.value}}" 
-	card-translated="{{currentCard.translated}}" 
-	flip-card="{{flipcard}}">
+	card-value="{{currentCard.value}}"
+	card-translated="{{currentCard.translated}}"
+	behaviour="flashCardBehaviour">
 </flashcard>
 
 <!-- User Data Entry for Guess -->
-<div ng-show="!flipcard" class="row data-entry">
+<div ng-hide="flashCardBehaviour.flipCard" class="row data-entry">
 	<div class="span2">
 	</div>
 	<div class="span2">

@@ -19,6 +19,7 @@ angular.module('meanRecipieApp')
 			$scope.result = result;
 			$scope.flashCardBehaviour = {flipCard: true, isAnswerCorrect: result};
 			$scope.scoreBoard = GameService.updateScoreBoard(result, $scope.currentCard);
+			$scope.scorePercentage = GameService.getScorePercentage();
 		};
 
 		$scope.moveAhead = function() {

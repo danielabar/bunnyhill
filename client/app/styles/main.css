@@ -53,3 +53,7 @@ body {
 .circle-error {
 	background: #E41D4D;
 }
+
+.progressbar {
+	border: 1px solid mediumaquamarine;
+}

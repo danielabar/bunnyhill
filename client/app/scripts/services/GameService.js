@@ -70,6 +70,14 @@ angular.module('meanRecipieApp')
 
 			getScoreBoard: function() {
 				return scoreBoard;
+			},
+
+			getScorePercentage : function() {
+				var correct = scoreBoard.correctCards.length;
+				var incorrect = scoreBoard.incorrectCards.length;
+				var totalCards = correct + incorrect;
+				var divide = totalCards / scoreBoard.outOf;
+   			return (divide) * 100;
 			}
 
 		};

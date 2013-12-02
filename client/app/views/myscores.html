@@ -1,12 +1,37 @@
-	<!--<div style="float:left; margin:5px;"> Select Game :  </div> 
+	<div style="float:left; margin:5px;"> Select Game :  </div> 
  	<div>
  		<select ng-model="scoreCard" ng-options="d.name for d in decks">
- 				<option value="">-- select option --</option>
   	</select>
-  </div>-->
-  <p>Scoreboard for deck : {{numbersScoreBoard[0].deckName}} </p>
+  </div>
+  
   <br/>
   <br/>
-  <div id="barchart">
-		<div id="d3bar" angulard3-bar-graph json-Value="{{numbersScoreBoard}}"></div>
+
+	<div ng-if="scoreCard.name === 'Numbers'">
+		<div id="barchart_1">
+				<angulard3-bar-graph  json-Value="{{numbersScoreBoard}}" barchart-Id="1">
+				</angulard3-bar-graph>	
+		</div>
 	</div>
+
+	<div ng-if="scoreCard.name === 'Days of the Week'">
+		<div id="barchart_2">
+				<angulard3-bar-graph json-Value="{{daysOfWeekScoreBoard}}"  barchart-Id="2">
+				</angulard3-bar-graph>	
+		</div>
+	</div>
+
+	<div ng-if="scoreCard.name === 'Nouns Pluralization'">
+		<div id="barchart_3">
+				<angulard3-bar-graph  json-Value="{{nounsScoreBoard}}" barchart-Id="3">
+				</angulard3-bar-graph>	
+		</div>
+	</div>
+
+	<div ng-if="scoreCard.name === 'Definite Articles'">
+		<div id="barchart_4">
+				<angulard3-bar-graph  json-Value="{{articlesScoreBoard}}" barchart-Id="4">
+				</angulard3-bar-graph>	
+		</div>
+	</div>
+	

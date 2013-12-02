@@ -20,6 +20,7 @@ app.use(express.session());
 app.use(lessMiddleware({
     dest: __dirname + '/client/app/styles',
     src: __dirname + '/client/app/less',
+    paths: [path.join(__dirname, 'bootstrap')],
     prefix: '/styles',
     compress: true
 }));

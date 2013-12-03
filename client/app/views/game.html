@@ -9,7 +9,11 @@
 <!-- Running Score -->
 <div class="row">
 	<div class="span3">
-		<progress percent="scorePercentage" animate="false" class="progressbar"></progress>
+		<div class="container_progress">
+     	<div class="progress progress-striped progressbar">
+      	<div class="bar" ng-style="score_percent_style">{{scorePercentage}}%</div>  
+     	</div>
+  	</div>
 		<br/>
 		<span>Score: {{scoreBoard.score}} correct out of {{scoreBoard.outOf}}</span>
 	</div>

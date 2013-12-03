@@ -77,7 +77,7 @@ angular.module('meanRecipieApp')
 				var incorrect = scoreBoard.incorrectCards.length;
 				var totalCards = correct + incorrect;
 				var divide = totalCards / scoreBoard.outOf;
-   			return (divide) * 100;
+   			return Math.round((divide) * 100);
 			}
 
 		};

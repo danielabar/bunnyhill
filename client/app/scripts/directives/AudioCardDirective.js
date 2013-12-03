@@ -1,6 +1,6 @@
 'use strict';
 
-// plays a sound
+// plays a sound for this card and allow replay
 angular.module('meanRecipieApp')
   .directive('audiocard', function ($document) {
     return {

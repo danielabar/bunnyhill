@@ -28,25 +28,35 @@ DONE FOR:
 * pod1635
 * pod1647
 
-
 ## Node v0.10.22 (adds C:\Program Files\nodejs\)
 * pod100113
 * pod1536
 * pod1635
 * pod1647
 
-
 ## Git
 * pod100113
+* pod1536
+* pod1635
+* pod1647
 
-## SourceTree
+## SourceTree (haven't configured anyone's github credentials)
 * pod100113
+* pod1536
+* pod1635
+* pod1647
 
 ## Batarang
 * pod100113
+* pod1536
+* pod1635
+* pod1647
 
 ## Robomongo
 * pod100113
+* pod1536
+* pod1635
+* pod1647
 
 ### Install Node Modules
 	```
@@ -56,8 +66,15 @@ DONE FOR:
 	npm install -g bower
 	npm install -g yo
 	npm install -g generator-angular
+
+	or 
+
+	npm install -g nodemon karma grunt-cli bower yo generator-angular
 	```
 * pod100113
+* pod1536
+* pod1635
+* pod1647
 
 
 ## Project Setup
@@ -73,6 +90,14 @@ DONE FOR:
 1. ```grunt test```
 1. ```nodemon server.js``` Nodemon will watch for file changes and automatically redeploy so you never need to restart your Node server.
 1. Launch a browser and enter [http://localhost:3000](http://localhost:3000)
+
+Confirmed:
+* pod100113
+* pod1536
+* pod1635
+* pod1647
+
+
 
 ## Configure Project Settings
 * Open Sublime Text 2

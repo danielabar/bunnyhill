@@ -6,10 +6,14 @@ var _ = require('underscore');
 var async = require('async');
 
 var getRecentScoreByDeck = function(deckName, cb) {
-	Score.findOne({ deckName : deckName }, { sort : { playedDate : -1 } }, function(err, result) {
+	Score.find({ 'deckName' : deckName }, { limit : 1 }, function(err, result) {
 		logger.info('getRecentScoreByDeck called for: ' + deckName + ', result: ' + JSON.stringify(result));
 		cb(err, result);
 	});
+	// Score.find({ deckName : deckName }, { sort : { playedDate : -1 } }, {limit:1}, function(err, result) {
+	// 	logger.info('getRecentScoreByDeck called for: ' + deckName + ', result: ' + JSON.stringify(result));
+	// 	cb(err, result);
+	// });
 };
 
 exports.get = function(req, res) {
@@ -18,13 +22,7 @@ exports.get = function(req, res) {
 			logger.error(module + ' get all deck err: ' + err);
 			res.send(err);
 		} else {
-			logger.info('DeckApi decks: ' + JSON.stringify(decks));
-			logger.info('Decks Api decks.length = ' + decks.length);
-			for (var i=0;i<decks.length;i++) {
-				logger.info('cur deck name: ' + decks[i].name);
-			}
 			var deckNames = _.pluck(decks, "name");
-			logger.info('DeckApi deckNames: ' + JSON.stringify(deckNames));
 			async.map(deckNames, getRecentScoreByDeck, function(err, scores){
 		    logger.info('DeckApi interim scores: ' + JSON.stringify(scores));
 				// TODO munge results with decks

@@ -11,10 +11,16 @@ db.once('open', function callback() {
 	logger.info('mongoose connection is open');
 });
 
-var DeckModel = mongoose.model('Deck', new mongoose.Schema({ name : String }, {
-	strict: false
-}));
+var DeckModel = mongoose.model('Deck', new mongoose.Schema(
+	{ name : String }, 
+	{strict: false}
+));
 
-var ScoreModel = mongoose.model('Score', new mongoose.Schema({ deckName : String, playedDate : Date }, {
-	strict: false
-}));
+var ScoreModel = mongoose.model('Score', new mongoose.Schema({ 
+		deckName : String, 
+		playedDate : Date,
+		score : Number,
+		outOf : Number 
+	},
+	{strict: false}
+));

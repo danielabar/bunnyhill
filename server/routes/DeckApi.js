@@ -6,14 +6,9 @@ var _ = require('underscore');
 var async = require('async');
 
 var getRecentScoreByDeck = function(deckName, cb) {
-	Score.find({ 'deckName' : deckName }, { limit : 1 }, function(err, result) {
-		logger.info('getRecentScoreByDeck called for: ' + deckName + ', result: ' + JSON.stringify(result));
+	Score.find({ 'deckName': deckName }).sort({ playedDate: 'desc'}).limit(1).exec(function(err, result) {
 		cb(err, result);
 	});
-	// Score.find({ deckName : deckName }, { sort : { playedDate : -1 } }, {limit:1}, function(err, result) {
-	// 	logger.info('getRecentScoreByDeck called for: ' + deckName + ', result: ' + JSON.stringify(result));
-	// 	cb(err, result);
-	// });
 };
 
 exports.get = function(req, res) {

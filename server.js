@@ -2,8 +2,8 @@ var express = require('express');
 var lessMiddleware = require('less-middleware');
 var logger = require('./server/lib/log');
 var db = require('./server/lib/db');
-var deck = require('./server/routes/deck');
-var score = require('./server/routes/score');
+var deckApi = require('./server/routes/DeckApi');
+var scoreApi = require('./server/routes/ScoreApi');
 var http = require('http');
 var path = require('path');
 
@@ -31,11 +31,11 @@ if ('development' == app.get('env')) {
   app.use(express.errorHandler());
 }
 
-app.get('/deck', deck.get);
-app.get('/deck/:name', deck.getByName);
-app.get('/score', score.get);
-app.get('/score/:id', score.getById);
-app.post('/score', score.post);
+app.get('/deck', deckApi.get);
+app.get('/deck/:name', deckApi.getByName);
+app.get('/score', scoreApi.get);
+app.get('/score/:id', scoreApi.getById);
+app.post('/score', scoreApi.post);
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));

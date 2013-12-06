@@ -21,10 +21,9 @@ exports.get = function(req, res) {
 			async.map(deckNames, getRecentScoreByDeck, function(err, scores){
 				var scoresByDeckName = _.indexBy(scores, 'deckName');
 				var decksPlusScores = _.map(decks, function(deck) { 
-					var newDeck = deck;
+					var newDeck = JSON.parse(JSON.stringify(deck));
 					var scoreMatch = scoresByDeckName[deck.name];
 					logger.info('scoreMatch: ' + JSON.stringify(scoreMatch));
-					// FIXME: mostRecentScore property not being persisted to the newDeck object
 					newDeck.mostRecentScore = scoreMatch;
 					return newDeck; 
 				});

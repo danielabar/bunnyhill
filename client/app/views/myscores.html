@@ -1,6 +1,6 @@
 	<div style="float:left; margin:5px;"> Select Game :  </div> 
  	<div>
- 		<select ng-model="scoreCard" ng-options="d.name for d in decks">
+ 		<select ng-model="scoreCard" ng-options="d.name for d in decks" ng-change="scoreCardChanged();">
   	</select>
   </div>
   <div>

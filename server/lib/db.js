@@ -16,8 +16,8 @@ var DeckModel = mongoose.model('Deck', new mongoose.Schema(
 	{strict: false}
 ));
 
-var ScoreModel = mongoose.model('Score', new mongoose.Schema({ 
-		deckName : String, 
+var ScoreModel = mongoose.model('Score', new mongoose.Schema(
+	{ deckName : String, 
 		playedDate : Date,
 		score : Number,
 		outOf : Number 

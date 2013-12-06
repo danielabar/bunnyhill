@@ -6,8 +6,8 @@ var _ = require('underscore');
 var async = require('async');
 
 var getRecentScoreByDeck = function(deckName, cb) {
-	Score.find({ 'deckName': deckName }).sort({ playedDate: 'desc'}).limit(1).exec(function(err, result) {
-		cb(err, result);
+	Score.find({ 'deckName': deckName }, 'deckName playedDate score outOf').sort({ playedDate: 'desc'}).limit(1).exec(function(err, score) {
+		cb(err, score[0]);
 	});
 };
 
@@ -19,9 +19,17 @@ exports.get = function(req, res) {
 		} else {
 			var deckNames = _.pluck(decks, "name");
 			async.map(deckNames, getRecentScoreByDeck, function(err, scores){
-		    logger.info('DeckApi interim scores: ' + JSON.stringify(scores));
-				// TODO munge results with decks
-				res.send(decks);
+				var scoresByDeckName = _.indexBy(scores, 'deckName');
+				var decksPlusScores = _.map(decks, function(deck) { 
+					var newDeck = deck;
+					var scoreMatch = scoresByDeckName[deck.name];
+					logger.info('scoreMatch: ' + JSON.stringify(scoreMatch));
+					// FIXME: mostRecentScore property not being persisted to the newDeck object
+					newDeck.mostRecentScore = scoreMatch;
+					return newDeck; 
+				});
+				logger.info('Returning decksPlusScores: ' + JSON.stringify(decksPlusScores));
+				res.send(decksPlusScores);
 			});
 		}
 	});

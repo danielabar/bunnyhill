@@ -7,6 +7,10 @@ angular.module('meanRecipieApp')
 				 $scope.level = '';
 			});
 
+			$scope.scoreCardChanged = function(){
+				$scope.level = '';
+			};
+
 			var numbersGame = "Numbers";
 			var daysOfWeekGame ="Days of the Week";
 			var nounsGame = "Nouns Pluralization";

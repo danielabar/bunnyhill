@@ -17,6 +17,15 @@ angular.module('meanRecipieApp').directive('angulard3LineChart', function () {
 			    var beginnerData = array[0];
 			    var intermediateData = array[1];
 			    var advanceData = array[2];
+			    var advanceValues =	_.chain(advanceData.values)
+			    				.sortBy(function(scoreObj){ return scoreObj.playedDate; })
+			    				.map(function(scoreObj) {
+			    					var retObject = new Object();
+					    			retObject.x = new Date(scoreObj.playedDate);
+					    			retObject.y = scoreObj.score;
+								    return retObject;
+			    				}).value();
+
 			    var beginnerValues = _.map(beginnerData.values, function(scoreObj) {
 			    			var retObject = new Object();
 			    			retObject.x = new Date(scoreObj.playedDate);
@@ -29,7 +38,7 @@ angular.module('meanRecipieApp').directive('angulard3LineChart', function () {
 			    			retObject.y = scoreObj.score;
 						    return retObject;
 					});
-					var advanceValues = _.map(advanceData.values, function(scoreObj) {
+					var advanceValues1 = _.map(advanceData.values, function(scoreObj) {
 			    			var retObject = new Object();
 			    			retObject.x = new Date(scoreObj.playedDate);
 			    			retObject.y = scoreObj.score;

@@ -7,7 +7,7 @@
          <div class="media-body">
         <h4 class="media-heading">
             <a ng-href="#/game/{{deck.name}}">{{deck.name}}</a></h4>
-           <span>Most recent score: {{deck.mostRecentScore.score}} out of {{deck.mostRecentScore.outOf}} played on {{deck.mostRecentScore.playedDate}}</span>
+           <span ng-show="deck.mostRecentScore">Most recent score: {{deck.mostRecentScore.score}} out of {{deck.mostRecentScore.outOf}} played on {{deck.mostRecentScore.playedDate | date:'medium'}}</span>
          <div class="media">
             <p>{{deck.language}}</p>
             <a ng-href="#/game/level/beginner/name/{{deck.name}}" class="btn btn-primary">Play Beginner!</a>
